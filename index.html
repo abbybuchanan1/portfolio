@@ -4,72 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abby Buchanan – UX Portfolio</title>
+  <meta name="description" content="UX Researcher focused on cognitive load, neurodivergence, and AI-supported workflows.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <nav class="nav">
+    <div class="logo-wrap">
+      <img src="https://i.imgur.com/Os5eD8X.png" alt="Abby Buchanan logo" class="logo-image">
+    </div>
 
-<nav class="nav">
-  <div class="logo">Abby Buchanan</div>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="scaffold.html">Scaffold</a>
-  </div>
-</nav>
+    <div class="nav-links">
+      <a href="#perspective">Research Perspective</a>
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="scaffold.html">Scaffold</a>
+    </div>
+  </nav>
 
-<section class="hero">
-  <h1>Designing cognitive prosthetics for overwhelmed minds.</h1>
-  <p>
-    UX Research & Strategy focused on neurodivergence, executive function,
-    and reducing cognitive load in real-world environments.
-  </p>
-</section>
+  <main>
+    <section class="hero hero-home">
+      <div class="eyebrow">UX Researcher</div>
+      <h1>Translating complexity into humane systems.</h1>
+      <p class="hero-copy">
+        UX Researcher focused on cognitive load, neurodivergence, and AI-supported workflows.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="scaffold.html">View Case Study →</a>
+      </div>
+    </section>
 
-<section class="section">
-  <div class="card">
-    <h2>Scaffold</h2>
-    <p>
-      A task initiation system designed to help users move from paralysis to action
-      through structured, adaptive support.
-    </p>
-    <a class="button" href="scaffold.html">View Case Study →</a>
-  </div>
-</section>
+    <section id="perspective" class="section">
+      <div class="section-label">Research Perspective</div>
+      <div class="two-col perspective-grid">
+        <div class="text-block">
+          <h2>A Hidden Layer of Work</h2>
+          <p>
+            Most digital systems require people to translate their thinking into structured formats.
+          </p>
+          <p>
+            Human cognition is nonlinear, contextual, and often ambiguous. Systems, however, demand clarity,
+            sequence, and precision.
+          </p>
+          <p>
+            This mismatch creates an invisible layer of cognitive labor.
+          </p>
+          <p>
+            My work focuses on designing that layer—reducing friction between human intent and system
+            requirements so people can move forward with less strain.
+          </p>
+        </div>
 
-<section id="about" class="section split">
-  <div>
-    <h2>About</h2>
-    <p>
-      I design systems that reduce cognitive load and support real-world functioning.
-      My work focuses on neurodivergence, executive dysfunction, and building tools
-      that act as external supports — cognitive prosthetics.
-    </p>
-  </div>
+        <div class="card framework-card">
+          <div class="mini-label">Framework</div>
+          <h3>Cognitive Translation in Digital Systems</h3>
+          <div class="framework-flow">
+            <div class="framework-node">
+              <div class="node-title">Human Intent</div>
+              <div class="node-copy">Ideas, goals, messy cognition</div>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-node">
+              <div class="node-title">Translation Layer</div>
+              <div class="node-copy">Converting thought into structured inputs</div>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-node">
+              <div class="node-title">Institutional Systems</div>
+              <div class="node-copy">Workflows, databases, enterprise tools, AI</div>
+            </div>
+          </div>
+          <p class="small-note">
+            This model illustrates where cognitive effort emerges when human intentions must be translated into structured systems.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <img src="https://i.imgur.com/aZgWs5E.jpeg" class="headshot">
-</section>
+    <section id="work" class="section">
+      <div class="section-label">Featured Project</div>
+      <div class="card project-feature">
+        <div class="project-copy">
+          <h2>Scaffold</h2>
+          <p class="project-subtitle">AI-powered task initiation support for cognitive overload</p>
+          <p>
+            A system designed to help users move from intention to action by reducing cognitive load,
+            clarifying first steps, and supporting regulation during overwhelm.
+          </p>
+          <a class="button" href="scaffold.html">View Case Study →</a>
+        </div>
 
-<section class="prototype">
-  <div class="card center">
-    <h2>Interactive Prototype</h2>
-    <p>
-      A working prototype demonstrating AI-generated next steps,
-      urgency calibration, and focus mode.
-    </p>
-    <a class="button" href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank">
-      Explore Prototype →
-    </a>
-  </div>
-</section>
+        <div class="project-image-wrap">
+          <img src="https://i.imgur.com/fFixOAG.png" alt="Scaffold home screen" class="project-image">
+        </div>
+      </div>
+    </section>
 
-<footer class="footer">
-  <p>© Abby Buchanan</p>
-  <a href="https://www.linkedin.com/in/abby-buchanan-09887221" target="_blank">LinkedIn</a>
-  <a href="mailto:buchanan.abby@gmail.com">Email</a>
-</footer>
+    <section id="writing" class="section">
+      <div class="section-label">Writing & Research</div>
+      <div class="writing-grid">
+        <article class="card writing-card">
+          <h3>The Invisible Tax: Cognitive Labor in Enterprise Software</h3>
+          <p>
+            Explores the hidden cognitive effort required to translate human thinking into system-compatible formats.
+          </p>
+        </article>
 
+        <article class="card writing-card">
+          <h3>Designing AI for Neurodivergent Workflows</h3>
+          <p>
+            Examines how AI can function as a cognitive prosthetic—supporting users with variable executive function.
+          </p>
+        </article>
+
+        <article class="card writing-card">
+          <h3>Cognitive Bandwidth & System Adoption</h3>
+          <p>
+            Why tools fail when users are overwhelmed, even when the functionality is technically sound.
+          </p>
+        </article>
+
+        <article class="card writing-card">
+          <h3>Systemic Friction as a Feature, Not a Bug</h3>
+          <p>
+            Reframing friction as signal—evidence of misalignment between human cognition and system expectations.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-label">About</div>
+      <div class="card about-card">
+        <div class="about-copy">
+          <h2>About Abby</h2>
+          <p>
+            I’m a UX researcher working at the intersection of cognition, systems design, and human behavior.
+          </p>
+          <p>
+            My work focuses on how people think, feel, and act under real-world constraints—especially in moments where traditional systems fail.
+          </p>
+        </div>
+
+        <img src="https://i.imgur.com/aZgWs5E.jpeg" alt="Headshot of Abby Buchanan" class="headshot">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Abby Buchanan</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/abby-buchanan-09887221" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:buchanan.abby@gmail.com">buchanan.abby@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
