@@ -10,8 +10,15 @@
   --beige: #ebeae4;
   --green: #10b981;
   --green-dark: #059669;
+  --red: #ef4444;
+  --red-dark: #dc2626;
+  --red-bg: #fef2f2;
+  --amber: #f59e0b;
+  --amber-dark: #d97706;
+  --amber-bg: #fef3c7;
   --radius-lg: 20px;
   --radius-md: 16px;
+  --radius-sm: 14px;
   --shadow-soft: 0 10px 30px rgba(17, 17, 17, 0.04);
   --max-width: 1200px;
 }
@@ -29,7 +36,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 img {
@@ -88,6 +95,11 @@ main {
   max-width: 980px;
 }
 
+.hero-scaffold {
+  max-width: 980px;
+  padding-bottom: 48px;
+}
+
 .eyebrow,
 .section-label,
 .mini-label {
@@ -131,6 +143,12 @@ p {
   color: var(--text-secondary);
 }
 
+.hero-subcopy {
+  font-size: 18px;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
 .hero-actions {
   margin-top: 28px;
 }
@@ -168,11 +186,22 @@ p {
   align-items: start;
 }
 
+.case-two-col {
+  align-items: start;
+}
+
 .text-block {
   padding-right: 8px;
 }
 
-.framework-card {
+.text-block-wide {
+  max-width: 860px;
+}
+
+.framework-card,
+.diagram-card,
+.methods-card,
+.intervention-card {
   padding: 28px;
   background: var(--bg-secondary);
 }
@@ -187,7 +216,12 @@ p {
   padding: 18px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.framework-node-green {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.08);
 }
 
 .node-title {
@@ -265,6 +299,147 @@ p {
   object-fit: cover;
 }
 
+/* Scaffold-specific */
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.method-item {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.insight-card {
+  padding: 28px;
+}
+
+.persona-card {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 36px;
+  align-items: start;
+  padding: 32px;
+}
+
+.persona-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.persona-large {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+.persona-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin: 24px 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+blockquote {
+  margin: 28px 0 0;
+  padding: 18px 22px;
+  border-left: 4px solid var(--green);
+  background: rgba(16, 185, 129, 0.06);
+  border-radius: 0 14px 14px 0;
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.cycle-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.cycle-step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.cycle-red {
+  background: var(--red-bg);
+  border-color: rgba(239, 68, 68, 0.18);
+}
+
+.cycle-amber {
+  background: var(--amber-bg);
+  border-color: rgba(245, 158, 11, 0.22);
+}
+
+.cycle-neutral {
+  background: #f6f5f0;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--text);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.step-title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.step-copy {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.intervention-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.intervention-item {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
 .prototype {
   padding: 80px 40px;
 }
@@ -272,6 +447,63 @@ p {
 .center {
   text-align: center;
   margin: 0 auto;
+}
+
+.cta-card {
+  max-width: 760px;
+  padding: 36px;
+}
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.prototype-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.prototype-card img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.prototype-card h3 {
+  margin-bottom: 8px;
+}
+
+.prototype-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.prototype-card-wide {
+  grid-column: span 2;
+}
+
+.reflection-block {
+  background: #161616;
+  color: #fff;
+  border-radius: 24px;
+  padding: 36px;
+  max-width: 900px;
+}
+
+.reflection-block h2,
+.reflection-block p {
+  color: #fff;
+}
+
+.reflection-label {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer {
@@ -302,18 +534,6 @@ p {
   color: var(--muted);
 }
 
-/* Scaffold page helpers */
-.subtitle {
-  font-size: 20px;
-  color: var(--text-secondary);
-}
-
-.image {
-  width: min(360px, 100%);
-  border-radius: 24px;
-  border: 1px solid var(--border);
-}
-
 @media (max-width: 960px) {
   .nav,
   .hero,
@@ -325,15 +545,26 @@ p {
 
   .two-col,
   .project-feature,
-  .about-card {
+  .about-card,
+  .persona-card {
     grid-template-columns: 1fr;
   }
 
-  .writing-grid {
+  .writing-grid,
+  .insights-grid,
+  .methods-grid,
+  .intervention-list,
+  .persona-columns,
+  .prototype-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-image-wrap {
+  .prototype-card-wide {
+    grid-column: span 1;
+  }
+
+  .project-image-wrap,
+  .persona-image-wrap {
     justify-content: flex-start;
   }
 
@@ -382,11 +613,22 @@ p {
   .framework-card,
   .writing-card,
   .project-feature,
-  .about-card {
+  .about-card,
+  .methods-card,
+  .insight-card,
+  .persona-card,
+  .diagram-card,
+  .intervention-card,
+  .cta-card,
+  .reflection-block {
     padding: 22px;
   }
 
   .logo-image {
     width: 150px;
+  }
+
+  blockquote {
+    font-size: 20px;
   }
 }

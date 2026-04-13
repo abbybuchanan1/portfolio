@@ -3,69 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scaffold Case Study</title>
+  <title>Scaffold – Case Study</title>
+  <meta name="description" content="Scaffold: a UX case study exploring AI-powered task initiation support for cognitive overload.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <nav class="nav">
+    <div class="logo-wrap">
+      <img src="https://i.imgur.com/Os5eD8X.png" alt="Abby Buchanan logo" class="logo-image">
+    </div>
 
-<nav class="nav">
-  <a href="index.html">← Portfolio</a>
-</nav>
+    <div class="nav-links">
+      <a href="index.html">Portfolio</a>
+      <a href="#prototype">Prototype</a>
+      <a href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank" rel="noreferrer">Open Prototype</a>
+    </div>
+  </nav>
 
-<section class="hero small">
-  <h1>Scaffold</h1>
-  <p>A system for reducing overwhelm and supporting task initiation.</p>
-</section>
+  <main>
+    <section class="hero hero-scaffold">
+      <div class="eyebrow">Case Study</div>
+      <h1>Scaffold</h1>
+      <p class="hero-copy">
+        AI-powered task initiation for cognitive overload.
+      </p>
+      <p class="hero-subcopy">
+        A UX case study exploring how AI reduces cognitive load by translating intention into concrete first steps.
+      </p>
+    </section>
 
-<section class="section">
-  <div class="card">
-    <h2>The Problem</h2>
-    <p>
-      Many users don’t struggle with knowing what to do —
-      they struggle with starting.
-    </p>
-  </div>
-</section>
+    <section class="section">
+      <div class="section-label">The Barrier to Entry</div>
+      <div class="text-block text-block-wide">
+        <h2>Why starting is the hard part</h2>
+        <p>
+          Initiating tasks requires a complex orchestration of executive function: prioritizing, breaking down steps, and regulating emotion.
+        </p>
+        <p>
+          For individuals experiencing cognitive overload or executive dysfunction, this threshold becomes impassable.
+        </p>
+        <p>
+          The intention to act is present—but the ability to begin is blocked.
+        </p>
+      </div>
+    </section>
 
-<section class="section">
-  <div class="card">
-    <h2>Design Approach</h2>
-    <p>
-      Scaffold acts as a cognitive prosthetic —
-      externalizing executive function at the moment it is needed most.
-    </p>
-  </div>
-</section>
+    <section class="section">
+      <div class="section-label">Research Approach</div>
+      <div class="card methods-card">
+        <h2>Methods</h2>
+        <div class="methods-grid">
+          <div class="method-item">Generative interviews</div>
+          <div class="method-item">Contextual inquiry</div>
+          <div class="method-item">Cognitive walkthroughs</div>
+          <div class="method-item">Thematic synthesis</div>
+        </div>
+      </div>
+    </section>
 
-<section class="section split">
-  <img src="https://i.imgur.com/qzju4f1.png" class="image">
+    <section class="section">
+      <div class="section-label">Key Insights</div>
+      <div class="insights-grid">
+        <article class="card insight-card">
+          <h3>Tasks are avoided due to unclear first steps</h3>
+          <p>Ambiguity creates immediate avoidance.</p>
+        </article>
 
-  <div>
-    <h2>Focus Mode</h2>
-    <p>
-      The interface removes all unnecessary elements,
-      leaving only the task and a rhythmic visual timer.
-    </p>
+        <article class="card insight-card">
+          <h3>Cognitive overload reduces decision-making capacity</h3>
+          <p>Planning requires resources that are unavailable during overwhelm.</p>
+        </article>
 
-    <h3>Why it works</h3>
-    <p>
-      It creates a bounded container for attention,
-      reducing overwhelm and making action possible.
-    </p>
-  </div>
-</section>
+        <article class="card insight-card">
+          <h3>Tools assume too much executive function</h3>
+          <p>Users are expected to organize before receiving support.</p>
+        </article>
+      </div>
+    </section>
 
-<section class="prototype">
-  <div class="card center">
-    <h2>Explore the Prototype</h2>
-    <a class="button" href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank">
-      Open Prototype →
-    </a>
-  </div>
-</section>
+    <section class="section">
+      <div class="section-label">Persona</div>
+      <div class="card persona-card">
+        <div class="persona-image-wrap">
+          <img src="https://i.imgur.com/m6IVEjP.png" alt="Persona card for Alex" class="persona-large">
+        </div>
 
+        <div class="persona-copy">
+          <h2>Alex</h2>
+          <p>
+            Alex is a highly capable adult who has spent much of their life being responsible, reliable, and self-sufficient.
+          </p>
+          <p>
+            Despite strong problem-solving ability, Alex experiences recurring cognitive shutdown—moments where starting even simple tasks becomes neurologically inaccessible.
+          </p>
+
+          <div class="persona-columns">
+            <div>
+              <h3>Triggers</h3>
+              <ul>
+                <li>Unexpected demands</li>
+                <li>High cognitive load</li>
+                <li>On-demand communication</li>
+                <li>Unclear starting points</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Thrives With</h3>
+              <ul>
+                <li>Predictability over urgency</li>
+                <li>Autonomy and consent</li>
+                <li>Low cognitive load</li>
+                <li>Validation of effort</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote>
+            “I’m capable—but only when my nervous system feels safe.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Understanding the Breakdown</div>
+      <div class="two-col case-two-col">
+        <div class="text-block">
+          <h2>Task initiation distress cycle</h2>
+          <p>
+            When task initiation fails, emotional and practical consequences accumulate, reducing cognitive bandwidth and reinforcing cycles of overwhelm.
+          </p>
+        </div>
+
+        <div class="card diagram-card">
+          <div class="mini-label">Framework</div>
+          <div class="cycle-list">
+            <div class="cycle-step cycle-red">
+              <span class="step-number">01</span>
+              <div>
+                <div class="step-title">Task appears</div>
+                <div class="step-copy">Demand is perceived, but no clear entry point exists.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-amber">
+              <span class="step-number">02</span>
+              <div>
+                <div class="step-title">Freeze response</div>
+                <div class="step-copy">Initiation stalls under ambiguity, pressure, or overload.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-amber">
+              <span class="step-number">03</span>
+              <div>
+                <div class="step-title">Consequences build</div>
+                <div class="step-copy">Avoidance increases stress, urgency, and self-judgment.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-neutral">
+              <span class="step-number">04</span>
+              <div>
+                <div class="step-title">Bandwidth drops</div>
+                <div class="step-copy">Cognitive resources are further depleted.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-red">
+              <span class="step-number">05</span>
+              <div>
+                <div class="step-title">Next task feels harder</div>
+                <div class="step-copy">The cycle reinforces itself unless interrupted.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Intervention</div>
+      <div class="card intervention-card">
+        <h2>Scaffold as a cognitive prosthetic</h2>
+        <p>
+          Scaffold functions as a cognitive prosthetic—an external support that extends a user’s ability to initiate action when internal resources are unavailable.
+        </p>
+        <p>
+          Instead of requiring planning, the system:
+        </p>
+
+        <div class="intervention-list">
+          <div class="intervention-item">Suggests a single first step</div>
+          <div class="intervention-item">Reduces ambiguity</div>
+          <div class="intervention-item">Externalizes cognitive load</div>
+          <div class="intervention-item">Supports regulation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">System Model</div>
+      <div class="two-col case-two-col">
+        <div class="text-block">
+          <h2>Interrupting the cycle</h2>
+          <p>
+            A supportive intervention restores bandwidth and reconnects users with action.
+          </p>
+        </div>
+
+        <div class="card diagram-card">
+          <div class="mini-label">System Model</div>
+          <div class="framework-flow">
+            <div class="framework-node">
+              <div class="node-title">Moment of freeze</div>
+              <div class="node-copy">User cannot generate an entry point alone.</div>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-node framework-node-green">
+              <div class="node-title">Scaffold prompt</div>
+              <div class="node-copy">System offers a concrete, manageable first step.</div>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-node">
+              <div class="node-title">Action becomes possible</div>
+              <div class="node-copy">Support reduces friction and restores momentum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="section">
+      <div class="section-label">Prototype</div>
+      <div class="text-block text-block-wide">
+        <h2>Selected prototype screens</h2>
+        <p>
+          Selected prototype screens illustrating key interaction patterns.
+        </p>
+      </div>
+
+      <div class="prototype-grid">
+        <article class="prototype-card">
+          <img src="https://i.imgur.com/fFixOAG.png" alt="Scaffold home screen">
+          <h3>Home</h3>
+          <p>Entry point for reducing activation energy and clarifying next action.</p>
+        </article>
+
+        <article class="prototype-card">
+          <img src="https://i.imgur.com/pFT7IvN.png" alt="DMV next step screen">
+          <h3>DMV Next Step</h3>
+          <p>A concrete example of turning an overwhelming task into a first actionable step.</p>
+        </article>
+
+        <article class="prototype-card">
+          <img src="https://i.imgur.com/DciZPZt.png" alt="Urgency calibration screen">
+          <h3>Urgency Calibration</h3>
+          <p>Helps users assess real urgency instead of reacting to internal pressure alone.</p>
+        </article>
+
+        <article class="prototype-card">
+          <img src="https://i.imgur.com/m5TsfA9.png" alt="Make it smaller screen">
+          <h3>Make It Smaller</h3>
+          <p>Breaks a task into a smaller, more psychologically reachable unit.</p>
+        </article>
+
+        <article class="prototype-card prototype-card-wide">
+          <img src="https://i.imgur.com/qzju4f1.png" alt="Focus timer screen">
+          <h3>Focus Timer</h3>
+          <p>Creates a bounded, finite container for attention during initiation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="prototype">
+      <div class="card center cta-card">
+        <div class="mini-label">Interactive Prototype</div>
+        <h2>Explore the working prototype</h2>
+        <p>
+          See how the system supports users from overwhelm to action in a high-fidelity flow.
+        </p>
+        <a class="button" href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank" rel="noreferrer">
+          Open Interactive Prototype →
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Outcome</div>
+      <div class="text-block text-block-wide">
+        <h2>What this enables</h2>
+        <p>
+          By reducing the cognitive barrier to entry, Scaffold enables users to move from intention to action with less friction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reflection-block">
+        <div class="section-label reflection-label">Reflection</div>
+        <h2>The problem is not motivation</h2>
+        <p>
+          It is misalignment between human cognition and system expectations.
+        </p>
+        <p>
+          Design must support how people actually function, not how systems expect them to behave.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Abby Buchanan</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/abby-buchanan-09887221" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="mailto:buchanan.abby@gmail.com">buchanan.abby@gmail.com</a>
+    </div>
+  </footer>
 </body>
 </html>
