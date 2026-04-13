@@ -170,8 +170,8 @@
 
         <div class="card diagram-card">
           <div class="mini-label">Framework</div>
-          <div class="cycle-list">
-            <div class="cycle-step cycle-red">
+          <div class="cycle-list cycle-list-clean">
+            <div class="cycle-step cycle-step-bar cycle-step-red">
               <span class="step-number">01</span>
               <div>
                 <div class="step-title">Task appears</div>
@@ -179,7 +179,7 @@
               </div>
             </div>
 
-            <div class="cycle-step cycle-amber">
+            <div class="cycle-step cycle-step-bar cycle-step-amber">
               <span class="step-number">02</span>
               <div>
                 <div class="step-title">Freeze response</div>
@@ -187,7 +187,7 @@
               </div>
             </div>
 
-            <div class="cycle-step cycle-amber">
+            <div class="cycle-step cycle-step-bar cycle-step-amber">
               <span class="step-number">03</span>
               <div>
                 <div class="step-title">Consequences build</div>
@@ -195,7 +195,7 @@
               </div>
             </div>
 
-            <div class="cycle-step cycle-neutral">
+            <div class="cycle-step cycle-step-bar cycle-step-neutral">
               <span class="step-number">04</span>
               <div>
                 <div class="step-title">Bandwidth drops</div>
@@ -203,7 +203,7 @@
               </div>
             </div>
 
-            <div class="cycle-step cycle-red">
+            <div class="cycle-step cycle-step-bar cycle-step-red">
               <span class="step-number">05</span>
               <div>
                 <div class="step-title">Next task feels harder</div>
@@ -279,11 +279,12 @@
         </p>
       </div>
 
-      <div class="prototype-grid">
+      <div class="prototype-grid prototype-grid-balanced">
         <article class="prototype-card">
           <img
             src="https://i.imgur.com/fFixOAG.png"
             alt="Scaffold home screen showing three initial options for getting started"
+            class="prototype-thumb"
           />
           <h3>Home</h3>
           <p>Entry point for reducing activation energy and clarifying next action.</p>
@@ -293,6 +294,7 @@
           <img
             src="https://i.imgur.com/pFT7IvN.png"
             alt="Prototype screen showing a concrete DMV next step"
+            class="prototype-thumb"
           />
           <h3>DMV Next Step</h3>
           <p>A concrete example of turning an overwhelming task into a first actionable step.</p>
@@ -302,6 +304,7 @@
           <img
             src="https://i.imgur.com/DciZPZt.png"
             alt="Urgency calibration screen asking the user to assess consequences"
+            class="prototype-thumb"
           />
           <h3>Urgency Calibration</h3>
           <p>Helps users assess real urgency instead of reacting to internal pressure alone.</p>
@@ -311,18 +314,35 @@
           <img
             src="https://i.imgur.com/m5TsfA9.png"
             alt="Make it smaller interaction showing a task broken into a more manageable step"
+            class="prototype-thumb"
           />
           <h3>Make It Smaller</h3>
           <p>Breaks a task into a smaller, more psychologically reachable unit.</p>
         </article>
 
-        <article class="prototype-card prototype-card-wide">
+        <article class="prototype-card">
           <img
             src="https://i.imgur.com/qzju4f1.png"
             alt="Focus timer screen showing a bounded visual timer for sustained attention"
+            class="prototype-thumb"
           />
           <h3>Focus Timer</h3>
           <p>Creates a bounded, finite container for attention during initiation.</p>
+          <p class="prototype-note">
+            Transition chimes provide gentle sensory cues at the beginning and end of a focus interval,
+            supporting users who benefit from externalized transitions and reduced reliance on internal
+            time tracking.
+          </p>
+        </article>
+
+        <article class="prototype-card">
+          <img
+            src="https://i.imgur.com/v3QgiBK.png"
+            alt="Celebration screen showing positive feedback after successful completion"
+            class="prototype-thumb"
+          />
+          <h3>Completion Moment</h3>
+          <p>A brief celebratory transition reinforces progress and gives emotional closure to the task.</p>
         </article>
       </div>
     </section>

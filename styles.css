@@ -449,6 +449,10 @@ blockquote {
   margin-top: 18px;
 }
 
+.cycle-list-clean .cycle-step {
+  background: #ffffff;
+}
+
 .cycle-step {
   display: grid;
   grid-template-columns: 52px 1fr;
@@ -460,18 +464,31 @@ blockquote {
   background: var(--surface);
 }
 
-.cycle-red {
-  background: var(--red-soft);
-  border-color: rgba(220, 38, 38, 0.16);
+.cycle-step-bar {
+  position: relative;
+  overflow: hidden;
 }
 
-.cycle-amber {
-  background: var(--amber-soft);
-  border-color: rgba(217, 119, 6, 0.18);
+.cycle-step-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 16px 0 0 16px;
 }
 
-.cycle-neutral {
-  background: var(--surface-alt);
+.cycle-step-red::before {
+  background: var(--red);
+}
+
+.cycle-step-amber::before {
+  background: var(--amber);
+}
+
+.cycle-step-neutral::before {
+  background: #8c8c8c;
 }
 
 .step-number {
@@ -538,6 +555,10 @@ blockquote {
   margin-top: 28px;
 }
 
+.prototype-grid-balanced {
+  align-items: start;
+}
+
 .prototype-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -546,11 +567,15 @@ blockquote {
   box-shadow: var(--shadow-soft);
 }
 
-.prototype-card img {
+.prototype-thumb {
   width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background: #faf9f6;
   border-radius: 18px;
   border: 1px solid var(--border);
   margin-bottom: 16px;
+  padding: 10px;
 }
 
 .prototype-card h3 {
@@ -563,8 +588,11 @@ blockquote {
   color: var(--muted);
 }
 
-.prototype-card-wide {
-  grid-column: span 2;
+.prototype-note {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
 }
 
 .reflection-block {
@@ -632,10 +660,6 @@ blockquote {
   .persona-columns,
   .prototype-grid {
     grid-template-columns: 1fr;
-  }
-
-  .prototype-card-wide {
-    grid-column: span 1;
   }
 
   .project-image-wrap,
