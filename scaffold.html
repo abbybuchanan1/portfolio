@@ -5,58 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scaffold Case Study</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <nav class="nav">
-    <a href="index.html">← Portfolio</a>
-  </nav>
+<nav class="nav">
+  <a href="index.html">← Portfolio</a>
+</nav>
 
-  <section class="section">
-    <h1>Scaffold</h1>
-    <p class="subtitle">
-      A system for reducing overwhelm and supporting task initiation.
-    </p>
-  </section>
+<section class="hero small">
+  <h1>Scaffold</h1>
+  <p>A system for reducing overwhelm and supporting task initiation.</p>
+</section>
 
-  <section class="section">
-    <h2>Designing for Neurodivergence</h2>
+<section class="section">
+  <div class="card">
+    <h2>The Problem</h2>
     <p>
-      Scaffold functions as a cognitive prosthetic—externalizing executive function
-      in moments where internal capacity is unavailable.
+      Many users don’t struggle with knowing what to do —
+      they struggle with starting.
     </p>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
+<section class="section">
+  <div class="card">
+    <h2>Design Approach</h2>
+    <p>
+      Scaffold acts as a cognitive prosthetic —
+      externalizing executive function at the moment it is needed most.
+    </p>
+  </div>
+</section>
+
+<section class="section split">
+  <img src="https://i.imgur.com/qzju4f1.png" class="image">
+
+  <div>
     <h2>Focus Mode</h2>
-
-    <img src="https://i.imgur.com/qzju4f1.png" alt="Focus Timer UI" class="image">
-
     <p>
-      The interface strips away all elements except the active task directive and a
-      prominent, rhythmic visual timer.
+      The interface removes all unnecessary elements,
+      leaving only the task and a rhythmic visual timer.
     </p>
 
-    <h3>What is happening</h3>
+    <h3>Why it works</h3>
     <p>
-      Once a step is accepted, the UI transitions into a dark, distraction-free focus mode.
-      The screen displays only the immediate action required and a countdown timer,
-      removing all navigation, secondary options, and visual clutter.
+      It creates a bounded container for attention,
+      reducing overwhelm and making action possible.
     </p>
+  </div>
+</section>
 
-    <h3>Why it matters</h3>
-    <p>
-      Minimizing external stimuli during initiation prevents tangential distraction.
-      The visual timer creates a structured, finite container for attention,
-      reducing the overwhelming feeling that the work will last indefinitely.
-    </p>
-  </section>
+<section class="prototype">
+  <div class="card center">
+    <h2>Explore the Prototype</h2>
+    <a class="button" href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank">
+      Open Prototype →
+    </a>
+  </div>
+</section>
 
 </body>
 </html>

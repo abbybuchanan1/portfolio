@@ -2,64 +2,88 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #f9f9f8;
-  color: #111111;
+  color: #111;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 24px 48px;
 }
 
 .logo {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit';
   font-weight: 500;
 }
 
 .nav a {
-  margin-left: 20px;
+  margin-left: 24px;
   text-decoration: none;
   color: #111;
 }
 
 .hero {
-  padding: 120px 40px;
-  max-width: 800px;
+  padding: 140px 48px;
+  max-width: 900px;
+}
+
+.hero.small {
+  padding: 100px 48px;
 }
 
 .hero h1 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 48px;
+  font-family: 'Outfit';
+  font-size: 56px;
+  line-height: 1.1;
 }
 
 .section {
-  padding: 80px 40px;
+  padding: 80px 48px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
   max-width: 800px;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 60px;
+  align-items: center;
 }
 
 .button {
   display: inline-block;
   margin-top: 20px;
-  padding: 12px 20px;
+  padding: 14px 22px;
   background: #111;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .prototype {
-  padding: 80px 40px;
-  text-align: center;
+  padding: 100px 48px;
 }
 
 .footer {
   padding: 40px;
   text-align: center;
-  font-size: 14px;
 }
 
 .image {
-  width: 300px;
+  width: 320px;
   border-radius: 20px;
-  margin: 20px 0;
+}
+
+.headshot {
+  width: 260px;
+  border-radius: 20px;
 }
