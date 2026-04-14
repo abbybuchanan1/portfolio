@@ -786,3 +786,34 @@ blockquote {
     text-align: center;
   }
 }
+
+/* Resume */
+.resume-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.resume-card {
+  padding: 28px;
+}
+
+.resume-meta {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.resume-card ul {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.resume-card li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
