@@ -1,13 +1,13 @@
 :root {
-  --bg: #f9f9f8;
-  --bg-secondary: #f6f5f0;
+  --bg: #f8f7f4;
+  --bg-secondary: #f3f1ea;
   --surface: #ffffff;
-  --surface-alt: #f3f1eb;
+  --surface-alt: #f6f4ee;
   --text: #111111;
-  --text-secondary: #3f3f3f;
-  --muted: #666666;
-  --light: #8c8c8c;
-  --border: #ddddda;
+  --text-secondary: #414141;
+  --muted: #6f6f6f;
+  --light: #8e8e8e;
+  --border: #dfdcd4;
 
   --purple: #8b5cf6;
   --purple-soft: rgba(139, 92, 246, 0.08);
@@ -25,7 +25,7 @@
   --radius-sm: 14px;
 
   --shadow-soft: 0 8px 24px rgba(17, 17, 17, 0.035);
-  --shadow-screen: 0 10px 24px rgba(17, 17, 17, 0.07);
+  --shadow-screen: 0 14px 30px rgba(17, 17, 17, 0.05);
 
   --max-width: 1240px;
   --content-width: 1180px;
@@ -558,8 +558,8 @@ blockquote {
 .prototype-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 22px;
+  border-radius: 24px;
+  padding: 26px 26px 24px;
   box-shadow: var(--shadow-soft);
 }
 
@@ -567,20 +567,26 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 18px;
-  min-height: 540px;
+  margin: 0 auto 20px;
+  min-height: 520px;
+  padding: 18px 10px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #fbfaf7 0%, #f6f3ec 100%);
+  border: 1px solid #ebe7de;
 }
 
 .screen-wrap-light {
-  background: transparent;
+  background: linear-gradient(180deg, #fbfaf7 0%, #f7f5ef 100%);
 }
 
 .prototype-thumb {
   width: 100%;
-  max-width: 300px;
+  max-width: 290px;
   height: auto;
   display: block;
+  object-fit: contain;
   box-shadow: var(--shadow-screen);
+  border-radius: 24px;
 }
 
 .prototype-card h3 {
@@ -652,10 +658,13 @@ blockquote {
 @media (max-width: 1080px) {
   .two-col,
   .case-two-col,
+  .project-feature,
+  .about-card,
   .persona-card {
     grid-template-columns: 1fr;
   }
 
+  .writing-grid,
   .insights-grid,
   .methods-grid,
   .intervention-list,
@@ -664,8 +673,13 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
+  .project-image-wrap,
   .persona-image-wrap {
     justify-content: flex-start;
+  }
+
+  .headshot {
+    max-width: 240px;
   }
 
   .screen-wrap {
@@ -696,11 +710,15 @@ blockquote {
     width: 150px;
   }
 
+  .framework-card,
   .methods-card,
   .diagram-card,
   .intervention-card,
+  .writing-card,
   .insight-card,
   .persona-card,
+  .project-feature,
+  .about-card,
   .cta-card,
   .reflection-block,
   .prototype-card {
@@ -716,6 +734,6 @@ blockquote {
   }
 
   .prototype-thumb {
-    max-width: 280px;
+    max-width: 260px;
   }
 }
