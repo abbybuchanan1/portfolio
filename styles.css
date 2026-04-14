@@ -30,6 +30,11 @@
 
   --max-width: 1240px;
   --content-width: 1180px;
+
+  --device-shell-width: 360px;
+  --device-shell-height: 680px;
+  --device-image-width: 286px;
+  --device-image-top: 52px;
 }
 
 * {
@@ -551,7 +556,7 @@ blockquote {
 .prototype-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 34px 34px;
+  gap: 38px 34px;
   margin-top: 32px;
   align-items: start;
 }
@@ -560,17 +565,19 @@ blockquote {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 8px 8px 0;
+  padding: 0;
   box-shadow: none;
+  text-align: center;
 }
 
 .screen-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto 24px;
-  min-height: 560px;
-  padding: 0;
+  align-items: flex-start;
+  margin: 0 auto 26px;
+  min-height: calc(var(--device-shell-height) + 10px);
+  padding-top: 0;
   background: transparent;
   border: none;
 }
@@ -580,38 +587,18 @@ blockquote {
   border: none;
 }
 
-/* Variant-inspired device treatment */
-.prototype-thumb {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 42px;
-  background: #fbfbf8;
-  border: 1px solid rgba(40, 40, 40, 0.09);
-  box-shadow: var(--shadow-device);
-  padding: 14px;
-  position: relative;
-}
-
-/* Create a soft speaker slot feel by using wrapper pseudo-elements */
-.screen-wrap {
-  position: relative;
-}
-
+/* soft device shell */
 .screen-wrap::before {
   content: "";
   position: absolute;
-  top: 18px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 280px;
-  max-height: calc(100% - 36px);
+  width: var(--device-shell-width);
+  height: var(--device-shell-height);
   border-radius: 42px;
   background: #fbfbf8;
-  border: 1px solid rgba(40, 40, 40, 0.09);
+  border: 1px solid rgba(40, 40, 40, 0.08);
   box-shadow: var(--shadow-device);
   z-index: 0;
 }
@@ -619,65 +606,53 @@ blockquote {
 .screen-wrap::after {
   content: "";
   position: absolute;
-  top: 34px;
+  top: 18px;
   left: 50%;
   transform: translateX(-50%);
-  width: 64px;
+  width: 96px;
   height: 8px;
   border-radius: 999px;
-  background: rgba(120, 120, 120, 0.18);
+  background: rgba(120, 120, 120, 0.16);
   z-index: 2;
 }
 
-/* Put image above the shell and size shell to image proportion */
-.screen-wrap .prototype-thumb {
+/* image placement inside shell */
+.prototype-thumb {
   position: relative;
   z-index: 1;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  border-radius: 30px;
-  max-width: 290px;
+  width: 100%;
+  max-width: var(--device-image-width);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-top: var(--device-image-top);
+  filter: drop-shadow(0 8px 18px rgba(17, 17, 17, 0.035));
 }
 
-/* Inner shell line */
-.screen-wrap .prototype-thumb {
-  filter: drop-shadow(0 14px 26px rgba(17, 17, 17, 0.05));
-}
-
-/* Caption styling */
+/* calm centered captions */
 .prototype-card h3 {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   font-size: 24px;
+  text-align: center;
 }
 
 .prototype-card p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 34ch;
   font-size: 15px;
   color: var(--muted);
-  max-width: 32ch;
+  text-align: center;
 }
 
 .prototype-note {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--border);
   color: var(--text-secondary);
+  max-width: 34ch;
 }
 
-/* Give each prototype image breathing room without obvious carding */
-.prototype-card > h3,
-.prototype-card > p {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/* Special handling for very light completion screen so shell still reads */
-.screen-wrap-light::before {
-  background: #f9f8f4;
-}
-
-/* Reflection */
 .reflection-block {
   max-width: 920px;
   padding: 38px;
@@ -755,11 +730,18 @@ blockquote {
   }
 
   .screen-wrap {
-    min-height: 500px;
+    min-height: calc(var(--device-shell-height) - 20px);
   }
 }
 
 @media (max-width: 760px) {
+  :root {
+    --device-shell-width: 300px;
+    --device-shell-height: 578px;
+    --device-image-width: 238px;
+    --device-image-top: 46px;
+  }
+
   .nav,
   .hero,
   .section,
@@ -804,22 +786,12 @@ blockquote {
     font-size: 17px;
   }
 
-  .prototype-card {
-    padding-left: 0;
-    padding-right: 0;
+  .prototype-grid {
+    gap: 30px;
   }
 
-  .screen-wrap {
-    min-height: 440px;
-    margin-bottom: 18px;
-  }
-
-  .screen-wrap::before {
-    width: 102px;
-    height: 248px;
-  }
-
-  .screen-wrap .prototype-thumb {
-    max-width: 250px;
+  .prototype-card h3,
+  .prototype-card p {
+    text-align: center;
   }
 }
