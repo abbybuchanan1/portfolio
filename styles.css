@@ -25,7 +25,8 @@
   --radius-sm: 14px;
 
   --shadow-soft: 0 8px 24px rgba(17, 17, 17, 0.035);
-  --shadow-screen: 0 14px 30px rgba(17, 17, 17, 0.05);
+  --shadow-device: 0 18px 42px rgba(17, 17, 17, 0.045);
+  --shadow-screen: 0 8px 20px rgba(17, 17, 17, 0.03);
 
   --max-width: 1240px;
   --content-width: 1180px;
@@ -550,45 +551,102 @@ blockquote {
 .prototype-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 28px;
+  gap: 34px 34px;
+  margin-top: 32px;
   align-items: start;
 }
 
 .prototype-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 26px 26px 24px;
-  box-shadow: var(--shadow-soft);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px 8px 0;
+  box-shadow: none;
 }
 
 .screen-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 20px;
-  min-height: 520px;
-  padding: 18px 10px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #fbfaf7 0%, #f6f3ec 100%);
-  border: 1px solid #ebe7de;
+  margin: 0 auto 24px;
+  min-height: 560px;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 .screen-wrap-light {
-  background: linear-gradient(180deg, #fbfaf7 0%, #f7f5ef 100%);
+  background: transparent;
+  border: none;
 }
 
+/* Variant-inspired device treatment */
 .prototype-thumb {
   width: 100%;
-  max-width: 290px;
+  max-width: 320px;
   height: auto;
   display: block;
   object-fit: contain;
-  box-shadow: var(--shadow-screen);
-  border-radius: 24px;
+  border-radius: 42px;
+  background: #fbfbf8;
+  border: 1px solid rgba(40, 40, 40, 0.09);
+  box-shadow: var(--shadow-device);
+  padding: 14px;
+  position: relative;
 }
 
+/* Create a soft speaker slot feel by using wrapper pseudo-elements */
+.screen-wrap {
+  position: relative;
+}
+
+.screen-wrap::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 280px;
+  max-height: calc(100% - 36px);
+  border-radius: 42px;
+  background: #fbfbf8;
+  border: 1px solid rgba(40, 40, 40, 0.09);
+  box-shadow: var(--shadow-device);
+  z-index: 0;
+}
+
+.screen-wrap::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(120, 120, 120, 0.18);
+  z-index: 2;
+}
+
+/* Put image above the shell and size shell to image proportion */
+.screen-wrap .prototype-thumb {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 30px;
+  max-width: 290px;
+}
+
+/* Inner shell line */
+.screen-wrap .prototype-thumb {
+  filter: drop-shadow(0 14px 26px rgba(17, 17, 17, 0.05));
+}
+
+/* Caption styling */
 .prototype-card h3 {
   margin-bottom: 8px;
   font-size: 24px;
@@ -597,6 +655,7 @@ blockquote {
 .prototype-card p {
   font-size: 15px;
   color: var(--muted);
+  max-width: 32ch;
 }
 
 .prototype-note {
@@ -606,6 +665,19 @@ blockquote {
   color: var(--text-secondary);
 }
 
+/* Give each prototype image breathing room without obvious carding */
+.prototype-card > h3,
+.prototype-card > p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Special handling for very light completion screen so shell still reads */
+.screen-wrap-light::before {
+  background: #f9f8f4;
+}
+
+/* Reflection */
 .reflection-block {
   max-width: 920px;
   padding: 38px;
@@ -683,7 +755,7 @@ blockquote {
   }
 
   .screen-wrap {
-    min-height: auto;
+    min-height: 500px;
   }
 }
 
@@ -720,8 +792,7 @@ blockquote {
   .project-feature,
   .about-card,
   .cta-card,
-  .reflection-block,
-  .prototype-card {
+  .reflection-block {
     padding: 22px;
   }
 
@@ -733,7 +804,22 @@ blockquote {
     font-size: 17px;
   }
 
-  .prototype-thumb {
-    max-width: 260px;
+  .prototype-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .screen-wrap {
+    min-height: 440px;
+    margin-bottom: 18px;
+  }
+
+  .screen-wrap::before {
+    width: 102px;
+    height: 248px;
+  }
+
+  .screen-wrap .prototype-thumb {
+    max-width: 250px;
   }
 }
