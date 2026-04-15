@@ -817,3 +817,49 @@ blockquote {
   opacity: 0.5;
   pointer-events: none;
 }
+
+/* =========================
+   ETHICS SECTION POLISH
+   ========================= */
+
+.ethics-section {
+  margin-top: 0;
+}
+
+.ethics-section .text-block {
+  max-width: 880px;
+}
+
+.ethics-section h2 {
+  margin-bottom: 16px;
+}
+
+.ethics-section p {
+  margin-bottom: 16px;
+}
+
+.ethics-section ul {
+  margin: 18px 0 20px;
+  padding-left: 20px;
+}
+
+.ethics-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.ethics-section a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Ensure consistent spacing across shared sections */
+
+.section .text-block.text-block-wide ul {
+  margin: 18px 0 20px;
+  padding-left: 20px;
+}
+
+.section .text-block.text-block-wide li {
+  margin-bottom: 10px;
+}
