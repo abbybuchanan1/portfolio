@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scaffold – Case Study</title>
+  <meta
+    name="description"
+    content="Scaffold: a UX case study exploring AI-powered task initiation support for cognitive overload."
+  />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
@@ -11,138 +15,437 @@
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
-  <nav class="nav">
-    <div class="logo-wrap">
-      <a href="index.html">
-        <img src="https://i.imgur.com/Os5eD8X.png" alt="Logo" class="logo-image" />
-      </a>
-    </div>
-
-    <div class="nav-links">
-      <a href="index.html">Portfolio</a>
-      <a href="#prototype">Prototype</a>
-      <a href="resume.html">Resume</a>
-      <a href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1" target="_blank">
-        Open Prototype
-      </a>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-  <section class="hero hero-scaffold">
-    <div class="eyebrow">Case Study</div>
-    <h1>Scaffold</h1>
-    <p class="hero-copy">AI-powered task initiation for cognitive overload.</p>
-    <p class="hero-subcopy">
-      A UX case study exploring how AI reduces cognitive load by translating intention into concrete first steps.
-    </p>
-  </section>
-
-  <!-- (keeping your existing sections unchanged above prototype) -->
-
-  <!-- PROTOTYPE -->
-  <section id="prototype" class="section">
-    <div class="section-label">Prototype</div>
-
-    <div class="prototype-grid">
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="01-home.png" class="prototype-thumb" />
-        </div>
-        <h3>Home</h3>
-        <p>Entry point for reducing activation energy and clarifying next action.</p>
-      </article>
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="02-dmv-next-step.png" class="prototype-thumb" />
-        </div>
-        <h3>DMV Next Step</h3>
-        <p>A concrete example of turning an overwhelming task into a first actionable step.</p>
-      </article>
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="03-urgency-calibration.png" class="prototype-thumb" />
-        </div>
-        <h3>Urgency Calibration</h3>
-        <p>Helps users assess real urgency instead of reacting to internal pressure alone.</p>
-      </article>
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="04-make-it-smaller.png" class="prototype-thumb" />
-        </div>
-        <h3>Make It Smaller</h3>
-        <p>Breaks a task into a smaller, more psychologically reachable unit.</p>
-      </article>
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="05-focus-timer.png" class="prototype-thumb" />
-        </div>
-        <h3>Focus Timer</h3>
-        <p>Creates a bounded, finite container for attention during initiation.</p>
-      </article>
-
-      <article class="prototype-card">
-        <div class="screen-wrap">
-          <img src="06-completion.png" class="prototype-thumb" />
-        </div>
-        <h3>Completion Moment</h3>
-        <p>A brief celebratory transition reinforces progress and gives emotional closure to the task.</p>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ✅ ETHICS SECTION (THIS IS THE FIX) -->
-  <section class="section">
-    <div class="section-label">Ethical AI Design Constraints</div>
-    <div class="text-block text-block-wide">
-
-      <h2>Designed for support, not behavioral control</h2>
-
-      <p>
-        Scaffold is designed as a support system, not a productivity optimizer or autonomous agent.
-        Its behavior is intentionally constrained to preserve user autonomy, minimize unintended
-        influence, and reduce cognitive burden.
-      </p>
-
-      <ul>
-        <li>No action is taken without explicit user approval—there are no silent automations.</li>
-        <li>The system is closed by default and does not access external data or other users’ information without opt-in.</li>
-        <li>User data is isolated and not pooled, shared, or used to build behavioral profiles.</li>
-        <li>All actions and recommendations are transparent and inspectable.</li>
-        <li>The system avoids psychological pressure, including urgency loops, streaks, or compliance tracking.</li>
-        <li>The user can pause, exit, or disengage at any time without consequence.</li>
-      </ul>
-
-      <p>
-        These constraints prioritize clarity, consent, and reversibility over automation and optimization.
-      </p>
-
-      <p>
-        <a href="scaffold-ethics.pdf" target="_blank">
-          Read full ethical framework →
+  <header>
+    <nav class="nav" aria-label="Case study navigation">
+      <div class="logo-wrap">
+        <a href="index.html" aria-label="Return to portfolio homepage">
+          <img
+            src="https://i.imgur.com/Os5eD8X.png"
+            alt="Abby Buchanan logo"
+            class="logo-image"
+          />
         </a>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Portfolio</a>
+        <a href="#prototype">Prototype</a>
+        <a href="resume.html">Resume</a>
+        <a
+          href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open Scaffold prototype in Figma"
+        >
+          Open Prototype
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero hero-scaffold">
+      <div class="eyebrow">Case Study</div>
+      <h1>Scaffold</h1>
+      <p class="hero-copy">AI-powered task initiation for cognitive overload.</p>
+      <p class="hero-subcopy">
+        A UX case study exploring how AI reduces cognitive load by translating intention into concrete first steps.
       </p>
+    </section>
 
+    <section class="section">
+      <div class="section-label">The Barrier to Entry</div>
+      <div class="text-block text-block-wide">
+        <h2>Why starting is the hard part</h2>
+        <p>
+          Initiating tasks requires a complex orchestration of executive function: prioritizing, breaking
+          down steps, and regulating emotion.
+        </p>
+        <p>
+          For individuals experiencing cognitive overload or executive dysfunction, this threshold becomes
+          impassable.
+        </p>
+        <p>
+          The intention to act is present—but the ability to begin is blocked.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Research Approach</div>
+      <div class="card methods-card">
+        <h2>Methods</h2>
+        <div class="methods-grid">
+          <div class="method-item">Generative interviews</div>
+          <div class="method-item">Contextual inquiry</div>
+          <div class="method-item">Cognitive walkthroughs</div>
+          <div class="method-item">Thematic synthesis</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Key Insights</div>
+      <div class="insights-grid">
+        <article class="card insight-card">
+          <h3>Tasks are avoided due to unclear first steps</h3>
+          <p>Ambiguity creates immediate avoidance.</p>
+        </article>
+
+        <article class="card insight-card">
+          <h3>Cognitive overload reduces decision-making capacity</h3>
+          <p>Planning requires resources that are unavailable during overwhelm.</p>
+        </article>
+
+        <article class="card insight-card">
+          <h3>Tools assume too much executive function</h3>
+          <p>Users are expected to organize before receiving support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Persona</div>
+      <div class="card persona-card">
+        <div class="persona-image-wrap">
+          <img
+            src="https://i.imgur.com/m6IVEjP.png"
+            alt="Persona illustration for Alex"
+            class="persona-large"
+          />
+        </div>
+
+        <div class="persona-copy">
+          <h2>Alex</h2>
+          <p>
+            Alex is a highly capable adult who has spent much of their life being responsible, reliable,
+            and self-sufficient.
+          </p>
+          <p>
+            Despite strong problem-solving ability, Alex experiences recurring cognitive shutdown—moments
+            where starting even simple tasks becomes neurologically inaccessible.
+          </p>
+
+          <div class="persona-columns">
+            <div>
+              <h3>Triggers</h3>
+              <ul>
+                <li>Unexpected demands</li>
+                <li>High cognitive load</li>
+                <li>On-demand communication</li>
+                <li>Unclear starting points</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Thrives With</h3>
+              <ul>
+                <li>Predictability over urgency</li>
+                <li>Autonomy and consent</li>
+                <li>Low cognitive load</li>
+                <li>Validation of effort</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote>
+            “I’m capable—but only when my nervous system feels safe.”
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Understanding the Breakdown</div>
+      <div class="two-col case-two-col">
+        <div class="text-block">
+          <h2>Task initiation distress cycle</h2>
+          <p>
+            When task initiation fails, emotional and practical consequences accumulate, reducing
+            cognitive bandwidth and reinforcing cycles of overwhelm.
+          </p>
+        </div>
+
+        <div class="card diagram-card">
+          <div class="mini-label">Framework</div>
+          <div class="cycle-list cycle-list-clean">
+            <div class="cycle-step cycle-step-bar cycle-step-red">
+              <span class="step-number">01</span>
+              <div>
+                <div class="step-title">Task appears</div>
+                <div class="step-copy">Demand is perceived, but no clear entry point exists.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-step-bar cycle-step-amber">
+              <span class="step-number">02</span>
+              <div>
+                <div class="step-title">Freeze response</div>
+                <div class="step-copy">Initiation stalls under ambiguity, pressure, or overload.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-step-bar cycle-step-amber">
+              <span class="step-number">03</span>
+              <div>
+                <div class="step-title">Consequences build</div>
+                <div class="step-copy">Avoidance increases stress, urgency, and self-judgment.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-step-bar cycle-step-neutral">
+              <span class="step-number">04</span>
+              <div>
+                <div class="step-title">Bandwidth drops</div>
+                <div class="step-copy">Cognitive resources are further depleted.</div>
+              </div>
+            </div>
+
+            <div class="cycle-step cycle-step-bar cycle-step-red">
+              <span class="step-number">05</span>
+              <div>
+                <div class="step-title">Next task feels harder</div>
+                <div class="step-copy">The cycle reinforces itself unless interrupted.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Intervention</div>
+      <div class="card intervention-card">
+        <h2>Scaffold as a cognitive prosthetic</h2>
+        <p>
+          Scaffold functions as a cognitive prosthetic—an external support that extends a user’s ability
+          to initiate action when internal resources are unavailable.
+        </p>
+        <p>Instead of requiring planning, the system:</p>
+
+        <div class="intervention-list">
+          <div class="intervention-item">Suggests a single first step</div>
+          <div class="intervention-item">Reduces ambiguity</div>
+          <div class="intervention-item">Externalizes cognitive load</div>
+          <div class="intervention-item">Supports regulation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">System Model</div>
+      <div class="two-col case-two-col">
+        <div class="text-block">
+          <h2>Interrupting the cycle</h2>
+          <p>
+            A supportive intervention restores bandwidth and reconnects users with action.
+          </p>
+        </div>
+
+        <div class="card diagram-card">
+          <div class="mini-label">System Model</div>
+          <div class="framework-flow">
+            <div class="framework-node">
+              <div class="node-title">Moment of freeze</div>
+              <div class="node-copy">User cannot generate an entry point alone.</div>
+            </div>
+
+            <div class="framework-arrow" aria-hidden="true">→</div>
+
+            <div class="framework-node framework-node-green">
+              <div class="node-title">Scaffold prompt</div>
+              <div class="node-copy">System offers a concrete, manageable first step.</div>
+            </div>
+
+            <div class="framework-arrow" aria-hidden="true">→</div>
+
+            <div class="framework-node">
+              <div class="node-title">Action becomes possible</div>
+              <div class="node-copy">Support reduces friction and restores momentum.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prototype" class="section">
+      <div class="section-label">Prototype</div>
+      <div class="text-block text-block-wide">
+        <h2>Selected prototype screens</h2>
+        <p>
+          Selected prototype screens illustrating key interaction patterns.
+        </p>
+      </div>
+
+      <div class="prototype-grid">
+        <article class="prototype-card">
+          <div class="screen-wrap">
+            <img
+              src="01-home.png"
+              alt="Scaffold home screen showing three initial options for getting started"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>Home</h3>
+          <p>Entry point for reducing activation energy and clarifying next action.</p>
+        </article>
+
+        <article class="prototype-card">
+          <div class="screen-wrap">
+            <img
+              src="02-dmv-next-step.png"
+              alt="Prototype screen showing a concrete DMV next step"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>DMV Next Step</h3>
+          <p>A concrete example of turning an overwhelming task into a first actionable step.</p>
+        </article>
+
+        <article class="prototype-card">
+          <div class="screen-wrap">
+            <img
+              src="03-urgency-calibration.png"
+              alt="Urgency calibration screen asking the user to assess consequences"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>Urgency Calibration</h3>
+          <p>Helps users assess real urgency instead of reacting to internal pressure alone.</p>
+        </article>
+
+        <article class="prototype-card">
+          <div class="screen-wrap">
+            <img
+              src="04-make-it-smaller.png"
+              alt="Make it smaller interaction showing a task broken into a more manageable step"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>Make It Smaller</h3>
+          <p>Breaks a task into a smaller, more psychologically reachable unit.</p>
+        </article>
+
+        <article class="prototype-card">
+          <div class="screen-wrap">
+            <img
+              src="05-focus-timer.png"
+              alt="Focus timer screen showing a bounded visual timer for sustained attention"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>Focus Timer</h3>
+          <p>Creates a bounded, finite container for attention during initiation.</p>
+          <p class="prototype-note">
+            Transition chimes provide gentle sensory cues at the beginning and end of a focus interval,
+            supporting users who benefit from externalized transitions and reduced reliance on internal
+            time tracking.
+          </p>
+        </article>
+
+        <article class="prototype-card">
+          <div class="screen-wrap screen-wrap-light">
+            <img
+              src="06-completion.png"
+              alt="Celebration screen showing positive feedback after successful completion"
+              class="prototype-thumb"
+            />
+          </div>
+          <h3>Completion Moment</h3>
+          <p>A brief celebratory transition reinforces progress and gives emotional closure to the task.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Ethical AI Design Constraints</div>
+      <div class="text-block text-block-wide">
+        <h2>Designed for support, not behavioral control</h2>
+        <p>
+          Scaffold is designed as a support system, not a productivity optimizer or autonomous agent.
+          Its behavior is intentionally constrained to preserve user autonomy, minimize unintended
+          influence, and reduce cognitive burden.
+        </p>
+
+        <ul>
+          <li>No action is taken without explicit user approval—there are no silent automations.</li>
+          <li>The system is closed by default and does not access external data or other users’ information without opt-in.</li>
+          <li>User data is isolated and not pooled, shared, or used to build behavioral profiles.</li>
+          <li>All actions and recommendations are transparent and inspectable.</li>
+          <li>The system avoids psychological pressure, including urgency loops, streaks, or compliance tracking.</li>
+          <li>The user can pause, exit, or disengage at any time without consequence.</li>
+        </ul>
+
+        <p>
+          These constraints prioritize clarity, consent, and reversibility over automation and optimization.
+        </p>
+
+        <p>
+          <a href="scaffold-ethics.pdf" target="_blank" rel="noreferrer">
+            Read full ethical framework →
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section class="prototype">
+      <div class="card center cta-card">
+        <div class="mini-label">Interactive Prototype</div>
+        <h2>Explore the working prototype</h2>
+        <p>
+          See how the system supports users from overwhelm to action in a high-fidelity flow.
+        </p>
+        <a
+          class="button"
+          href="https://www.figma.com/make/pAo4Z5gKCJA5MVFRZWsUmM/Scaffold-Prototype?t=KeUeCjteVHEtCc3T-1"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open interactive Scaffold prototype in Figma"
+        >
+          Open Interactive Prototype →
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Outcome</div>
+      <div class="text-block text-block-wide">
+        <h2>What this enables</h2>
+        <p>
+          By reducing the cognitive barrier to entry, Scaffold enables users to move from intention to
+          action with less friction.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="reflection-block">
+        <div class="section-label reflection-label">Reflection</div>
+        <h2>The problem is not motivation</h2>
+        <p>It is misalignment between human cognition and system expectations.</p>
+        <p>
+          Design must support how people actually function, not how systems expect them to behave.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Abby Buchanan</p>
+    <div class="footer-links">
+      <a
+        href="https://www.linkedin.com/in/abby-buchanan-09887221"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Open LinkedIn profile"
+      >
+        LinkedIn
+      </a>
+      <a href="mailto:buchanan.abby@gmail.com">buchanan.abby@gmail.com</a>
     </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <p>© Abby Buchanan</p>
-</footer>
-
+  </footer>
 </body>
 </html>
