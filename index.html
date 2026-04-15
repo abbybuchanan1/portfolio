@@ -3,227 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abby Buchanan – UX Portfolio</title>
-  <meta
-    name="description"
-    content="UX Researcher focused on cognitive load, neurodivergence, and AI-supported workflows."
-  />
+  <title>Abby Buchanan – UX Researcher</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="logo-wrap">
-        <a href="index.html" aria-label="Go to homepage">
-          <img
-            src="https://i.imgur.com/Os5eD8X.png"
-            alt="Abby Buchanan logo"
-            class="logo-image"
-          />
-        </a>
-      </div>
+<header class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="logo">Abby Buchanan</a>
+  </div>
+  <div class="nav-right">
+    <a href="#work">Work</a>
+    <a href="#writing">Writing</a>
+    <a href="resume.html">Resume</a>
+  </div>
+</header>
 
-      <div class="nav-links">
-        <a href="#perspective">Research Perspective</a>
-        <a href="#work">Work</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-        <a href="scaffold.html">Scaffold</a>
-        <a href="resume.html">Resume</a>
-      </div>
-    </nav>
-  </header>
+<main>
 
-  <main id="main-content">
-    <section class="hero hero-home">
-      <div class="eyebrow">UX Researcher</div>
-      <h1>Translating complexity into humane systems.</h1>
-      <p class="hero-copy">
-        UX Researcher focused on cognitive load, neurodivergence, and AI-supported workflows.
-      </p>
-      <div class="hero-actions">
-        <a class="button" href="scaffold.html" aria-label="View Scaffold case study">
-          View Case Study →
-        </a>
-      </div>
-    </section>
-
-    <section id="perspective" class="section">
-      <div class="section-label">Research Perspective</div>
-      <div class="two-col perspective-grid">
-        <div class="text-block">
-          <h2>The Hidden Layer: Translation Work</h2>
-
-          <p>
-            Most systems are not difficult because of the task itself, but because of the translation required to complete it.
-          </p>
-
-          <p>
-            Work often depends on turning ideas into structured formats—documents, workflows, forms, and communication that align with institutional expectations. This translation layer is rarely acknowledged, yet it is where a significant amount of cognitive friction occurs.
-          </p>
-
-          <p>
-            I’m interested in how we design systems that reduce this hidden labor, and how emerging tools like AI might change who is able to participate effectively—not just how efficiently work gets done.
-          </p>
-        </div>
-
-        <div class="card framework-card">
-          <div class="mini-label">Framework</div>
-          <h3>Cognitive Translation in Digital Systems</h3>
-
-          <div class="framework-flow">
-            <div class="framework-node">
-              <div class="node-title">Human Intent</div>
-              <div class="node-copy">Ideas, goals, messy cognition</div>
-            </div>
-
-            <div class="framework-arrow" aria-hidden="true">→</div>
-
-            <div class="framework-node framework-node-accent">
-              <div class="node-title">Translation Layer</div>
-              <div class="node-copy">Converting thought into structured inputs</div>
-            </div>
-
-            <div class="framework-arrow" aria-hidden="true">→</div>
-
-            <div class="framework-node">
-              <div class="node-title">Institutional Systems</div>
-              <div class="node-copy">Workflows, databases, enterprise tools, AI</div>
-            </div>
-          </div>
-
-          <p class="small-note">
-            This model illustrates where cognitive effort emerges when human intentions must be translated into structured systems.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="section">
-      <div class="section-label">Featured Project</div>
-      <div class="card project-feature">
-        <div class="project-copy">
-          <h2>Scaffold</h2>
-          <p class="project-subtitle">AI-powered task initiation support for cognitive overload</p>
-          <p>
-            A system designed to help users move from intention to action by reducing cognitive load,
-            clarifying first steps, and supporting regulation during overwhelm.
-          </p>
-          <a class="button" href="scaffold.html" aria-label="Open Scaffold case study">
-            View Case Study →
-          </a>
-        </div>
-
-        <div class="project-image-wrap">
-          <img
-            src="https://i.imgur.com/fFixOAG.png"
-            alt="Scaffold home screen showing simplified task initiation options"
-            class="project-image"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="writing" class="section">
-
-  <div class="section-label">Writing & Research</div>
-
-  <div class="text-block text-block-wide">
-    <h2>Research explorations</h2>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>UX Researcher & Strategist</h1>
     <p>
-      My work extends beyond individual projects into ongoing research around cognition, systems, and emerging technology.
-    </p>
-
-    <p>
-      I’m particularly interested in how people move through systems under real conditions—especially when cognitive bandwidth is limited—and how design can reduce the hidden labor required to translate thinking into structured formats.
+      I study how people move through systems under real conditions—especially when cognitive bandwidth is limited—and how design can reduce the hidden labor required to translate thinking into structured formats.
     </p>
   </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section">
+  <h2>Selected Work</h2>
+
+  <div class="card">
+    <h3>Scaffold</h3>
+    <p>
+      A system designed to support task initiation for users experiencing cognitive overload, using AI to reduce friction and clarify next steps.
+    </p>
+    <a href="scaffold.html" class="text-link">View Case Study →</a>
+  </div>
+
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="section">
+
+  <h2>Writing & Research</h2>
+
+  <p class="section-intro">
+    A series exploring access, translation, and emerging systems.
+  </p>
 
   <div class="writing-grid">
 
-    <!-- FEATURED PIECE -->
-    <article class="card writing-card">
+    <div class="card">
       <h3>The Real AI Divide Isn’t Intelligence. It’s Bandwidth</h3>
       <p>
-        Examines how cognitive and emotional margin—not capability—determines who is able to engage with AI systems.
+        Explores how cognitive and emotional margin—not capability—determines who is able to engage with AI systems.
       </p>
       <a href="ai-bandwidth.pdf" target="_blank" class="text-link">
         Read →
       </a>
-    </article>
+    </div>
 
-    <!-- RESEARCH DIRECTIONS -->
-
-    <article class="card writing-card">
+    <div class="card">
       <h3>The Invisible Tax: Cognitive Labor in Systems</h3>
       <p>
-        Explores the hidden work required to translate human thinking into system-compatible formats—and how this shapes participation and outcomes.
+        Examines the hidden work required to translate human thinking into system-compatible formats—and how that shapes who is recognized and rewarded.
       </p>
-    </article>
+      <a href="invisible-tax.pdf" target="_blank" class="text-link">
+        Read →
+      </a>
+    </div>
 
-    <article class="card writing-card">
-      <h3>Designing for Cognitive Variability</h3>
+    <div class="card">
+      <h3>The Opportunity Gap: Who Actually Benefits from AI</h3>
       <p>
-        Investigates how systems can better support users with different cognitive styles, particularly under real-world constraints.
+        Looks at how AI amplifies advantage over time—and why access to opportunity, not just tools, determines who benefits.
       </p>
-    </article>
-
-    <article class="card writing-card">
-      <h3>Friction as Signal</h3>
-      <p>
-        Reframes friction not as failure, but as evidence of misalignment between human cognition and system expectations.
-      </p>
-    </article>
+      <a href="opportunity-gap.pdf" target="_blank" class="text-link">
+        Read →
+      </a>
+    </div>
 
   </div>
 
 </section>
 
-    <section id="about" class="section">
-      <div class="section-label">About</div>
-      <div class="card about-card">
-        <div class="about-copy">
-          <h2>About Abby</h2>
-          <p>
-            I’m a UX researcher working at the intersection of cognition, systems design, and human
-            behavior.
-          </p>
-          <p>
-            My work focuses on how people think, feel, and act under real-world constraints—especially
-            in moments where traditional systems fail.
-          </p>
-        </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>
+    Abby Buchanan — UX Researcher & Strategist
+  </p>
+</footer>
 
-        <img
-          src="https://i.imgur.com/aZgWs5E.jpeg"
-          alt="Headshot of Abby Buchanan"
-          class="headshot"
-        />
-      </div>
-    </section>
-  </main>
+</main>
 
-  <footer class="footer">
-    <p>© Abby Buchanan</p>
-    <div class="footer-links">
-      <a
-        href="https://www.linkedin.com/in/abby-buchanan-09887221"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Open LinkedIn profile"
-      >
-        LinkedIn
-      </a>
-      <a href="mailto:buchanan.abby@gmail.com">buchanan.abby@gmail.com</a>
-    </div>
-  </footer>
 </body>
 </html>
