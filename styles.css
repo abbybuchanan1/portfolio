@@ -861,22 +861,45 @@ blockquote {
 }
 
 /* =========================
-   NAV LOGO (FINAL)
+   NAV BRAND (FINAL CLEAN)
    ========================= */
 
 .logo-wrap {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
 }
 
-.logo-wrap a {
+.brand-lockup {
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
 .logo-image {
-  height: 28px;
+  height: 42px;
   width: auto;
   display: block;
-  opacity: 0.95;
+  flex: 0 0 auto;
+}
+
+.brand-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #111111;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .logo-image {
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
 }
