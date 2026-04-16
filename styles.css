@@ -113,8 +113,9 @@ footer {
 }
 
 .logo-image {
-  width: 182px;
-  height: auto;
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
