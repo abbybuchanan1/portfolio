@@ -945,13 +945,13 @@ blockquote {
     width: 100%;
   }
 
-  .brand-lockup {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
+ .brand-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+}
   .logo-image {
     height: 28px;
   }
