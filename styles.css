@@ -1060,29 +1060,31 @@ blockquote {
     gap: 10px;
   }
 
-  .logo-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
+ .logo-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
 
-  .brand-lockup {
-    display: grid;
-    grid-template-columns: 28px auto;
-    align-items: center;
-    column-gap: 10px;
-    width: auto;
-  }
+.brand-lockup {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  column-gap: 10px;
+  width: auto;
+}
 
-  .logo-image {
-    height: 28px;
-  }
+.logo-image {
+  height: 28px;
+  width: auto;
+  max-width: none;
+  display: block;
+}
 
-  .brand-name {
-    font-size: 16px;
-    line-height: 1;
-  }
-
+.brand-name {
+  font-size: 16px;
+  line-height: 1;
+}
   .nav-links {
     display: flex;
     flex-wrap: nowrap;
