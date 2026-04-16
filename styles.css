@@ -934,7 +934,7 @@ blockquote {
 
 @media (max-width: 760px) {
   .nav {
-    padding: 16px 22px 2px;
+    padding: 16px 22px 4px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -945,6 +945,9 @@ blockquote {
   }
 
   .brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
     gap: 10px;
   }
 
@@ -958,11 +961,11 @@ blockquote {
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px 18px;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .nav-links a {
