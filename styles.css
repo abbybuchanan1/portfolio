@@ -941,16 +941,18 @@ blockquote {
     gap: 10px;
   }
 
-  .logo-wrap {
-    width: 100%;
-  }
-
- .brand-lockup {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
+ .logo-wrap {
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.brand-lockup {
+  display: grid;
+  grid-template-columns: 28px auto;
+  align-items: center;
+  column-gap: 10px;
+  width: auto;
 }
   .logo-image {
     height: 28px;
