@@ -931,3 +931,46 @@ blockquote {
     line-height: 1.3;
   }
 }
+
+@media (max-width: 760px) {
+  .nav {
+    padding: 18px 22px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+  }
+
+  .logo-image {
+    height: 30px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 10px 20px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .hero,
+  .hero-home {
+    padding-top: 32px;
+  }
+
+  .hero-copy,
+  .hero-subcopy {
+    max-width: 22rem;
+  }
+}
