@@ -1052,7 +1052,7 @@ blockquote {
 
 @media (max-width: 760px) {
   .nav {
-    padding: 16px 22px 2px;
+    padding: 16px 22px 4px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -1063,7 +1063,11 @@ blockquote {
   }
 
   .brand-lockup {
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
   }
 
   .logo-image {
@@ -1076,20 +1080,20 @@ blockquote {
   }
 
   .nav-links {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 12px;
-  width: 100%;
-  margin-top: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    width: 100%;
+    margin-top: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.nav-links a {
-  font-size: 12px;
-  line-height: 1.1;
-  white-space: nowrap;
-}
+  .nav-links a {
+    font-size: 12px;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
 
   .hero,
   .hero-home,
