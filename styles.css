@@ -1075,17 +1075,20 @@ blockquote {
   }
 
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(3, max-content);
-    gap: 8px 18px;
-    width: 100%;
-    margin-top: 2px;
-  }
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: 100%;
+  margin-top: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
-  .nav-links a {
-    font-size: 12.5px;
-    line-height: 1.15;
-  }
+.nav-links a {
+  font-size: 12px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
 
   .hero,
   .hero-home,
