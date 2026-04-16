@@ -1151,3 +1151,16 @@ blockquote {
     font-size: 15px;
   }
 }
+.back-to-top {
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.back-to-top a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
