@@ -112,11 +112,6 @@ footer {
   align-items: center;
 }
 
-.logo-image {
-  height: 28px;
-  width: auto;
-  display: block;
-}
 
 .nav-links {
   display: flex;
@@ -863,4 +858,25 @@ blockquote {
 
 .section .text-block.text-block-wide li {
   margin-bottom: 10px;
+}
+
+/* =========================
+   NAV LOGO (FINAL)
+   ========================= */
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrap a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 28px;
+  width: auto;
+  display: block;
+  opacity: 0.95;
 }
