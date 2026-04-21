@@ -485,6 +485,17 @@ blockquote {
 .cycle-step-neutral::before {
   background: #8c8c8c;
 }
+.cycle-step-red {
+  background: rgba(220, 38, 38, 0.03);
+}
+
+.cycle-step-amber {
+  background: rgba(217, 119, 6, 0.04);
+}
+
+.cycle-step-neutral {
+  background: rgba(140, 140, 140, 0.04);
+}
 
 .step-number {
   display: inline-flex;
