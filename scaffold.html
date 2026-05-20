@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scaffold – Case Study</title>
+
+  <title>Scaffold – UX Case Study</title>
   <meta
     name="description"
-    content="Scaffold: a UX case study exploring AI-powered task initiation support for cognitive overload."
+    content="Scaffold: a UX research case study exploring executive function support, cognitive overload, and ethical AI-supported task initiation."
   />
 
   <link
@@ -15,6 +16,7 @@
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -22,11 +24,7 @@
     <nav class="nav" aria-label="Scaffold navigation">
       <div class="logo-wrap">
         <a href="index.html" aria-label="Go to homepage" class="brand-lockup">
-          <img
-            src="logo-dark.png"
-            alt="Abby Buchanan logo"
-            class="logo-image"
-          />
+          <img src="logo-dark.png" alt="Abby Buchanan logo" class="logo-image" />
           <span class="brand-name">Abby Buchanan</span>
         </a>
       </div>
@@ -44,60 +42,146 @@
     <section class="hero hero-scaffold">
       <div class="eyebrow">Case Study</div>
       <h1>Scaffold</h1>
-      <p class="hero-copy">AI-powered task initiation for cognitive overload.</p>
-      <p class="hero-subcopy">
-        A UX case study exploring how AI reduces cognitive load by translating intention into concrete first steps.
+      <p class="hero-copy">Executive function support for cognitive overload.</p>
+      <p class="hero-subcopy hero-subcopy-wide">
+        A research-driven support system designed to help adults experiencing task paralysis, overwhelm, or executive dysfunction move from stuckness into the next small actionable step—without shame, surveillance, or coercive automation.
       </p>
-    </section>
 
-    <section class="section">
-      <div class="section-label">The Barrier to Entry</div>
-      <div class="text-block text-block-wide">
-        <h2>Why starting is the hard part</h2>
-        <p>
-          Initiating tasks requires a complex orchestration of executive function: prioritizing, breaking
-          down steps, and regulating emotion.
-        </p>
-        <p>
-          For individuals experiencing cognitive overload or executive dysfunction, this threshold becomes
-          impassable.
-        </p>
-        <p>
-          The intention to act is present—but the ability to begin is blocked.
-        </p>
-      </div>
-    </section>
+      <div class="meta-grid">
+        <div class="card meta-card">
+          <h2>Role</h2>
+          <p>UX researcher, product strategist, interaction designer</p>
+        </div>
 
-    <section class="section">
-      <div class="section-label">Research Approach</div>
-      <div class="card methods-card">
-        <h2>Methods</h2>
-        <div class="methods-grid">
-          <div class="method-item">Generative interviews</div>
-          <div class="method-item">Contextual inquiry</div>
-          <div class="method-item">Cognitive walkthroughs</div>
-          <div class="method-item">Thematic synthesis</div>
+        <div class="card meta-card">
+          <h2>Methods</h2>
+          <p>Generative interviews, contextual inquiry, thematic synthesis, paper prototyping, high-fidelity prototyping, usability testing, ethical AI constraints</p>
+        </div>
+
+        <div class="card meta-card">
+          <h2>Focus</h2>
+          <p>Executive function, neurodivergent accessibility, AI-supported workflows, emotional safety, consent-based interaction</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-label">Key Insights</div>
+      <div class="section-label">Problem Space</div>
+      <div class="text-block text-block-wide">
+        <h2>The problem is not motivation.</h2>
+        <p>
+          Many productivity tools assume that people already have enough cognitive bandwidth to define the task, prioritize the work, initiate action, recover from interruption, and respond to reminders.
+        </p>
+        <p>
+          For users experiencing ADHD, autism, depression, trauma, chronic illness, burnout, or executive dysfunction, the hardest part is often not the task itself—it is translating intention into sequence while already overloaded.
+        </p>
+        <p>
+          Scaffold explores a different model: not optimizing output, but reducing the friction between wanting to act and knowing how to begin.
+        </p>
+      </div>
+    </section>
+
+    <section class="section evidence-section">
+      <div class="section-label">Research Foundation</div>
+      <div class="text-block text-block-wide">
+        <h2>Primary research focused on lived experience, not assumptions.</h2>
+        <p>
+          I conducted long-form qualitative interviews with adults who experience executive function challenges related to neurodivergence, trauma, chronic illness, depression, or cognitive overload. These interviews explored what “being stuck” feels like, what triggers shutdown, what forms of support help or harm, and what participants wished others understood about their internal experience.
+        </p>
+      </div>
+
+      <div class="artifact-grid">
+        <article class="card artifact-card">
+          <h3>Ethical research plan</h3>
+          <p>Defined consent, participant autonomy, confidentiality, psychological safety, and trauma-aware boundaries before research began.</p>
+        </article>
+
+        <article class="card artifact-card">
+          <h3>Interview protocol</h3>
+          <p>Used semi-structured questions to explore lived experience, context, support strategies, emotional impact, and unmet needs.</p>
+        </article>
+
+        <article class="card artifact-card">
+          <h3>Activity notes</h3>
+          <p>Translated raw interview material into observable patterns, behavioral notes, and design-relevant insights.</p>
+        </article>
+
+        <article class="card artifact-card">
+          <h3>Usability test script</h3>
+          <p>Created realistic task scenarios to evaluate whether the prototype supported initiation, focus protection, and overwhelm recovery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Research Insights</div>
+      <div class="text-block text-block-wide">
+        <h2>What I heard</h2>
+        <p>
+          Across interviews, participants described executive dysfunction less as a lack of motivation and more as a state of overwhelm, shutdown, or disconnection from sequencing. Several described being capable of doing the task, but unable to locate the first step, retrieve the strategy, or tolerate the decision load required to begin.
+        </p>
+      </div>
+
       <div class="insights-grid">
         <article class="card insight-card">
-          <h3>Tasks are avoided due to unclear first steps</h3>
-          <p>Ambiguity creates immediate avoidance.</p>
+          <h3>Tasks become overwhelming when they arrive as an undefined package.</h3>
+          <p>Participants often knew the task mattered, but the effort required to break it down created its own barrier.</p>
         </article>
 
         <article class="card insight-card">
-          <h3>Cognitive overload reduces decision-making capacity</h3>
-          <p>Planning requires resources that are unavailable during overwhelm.</p>
+          <h3>Shame intensifies paralysis.</h3>
+          <p>Support that feels corrective, controlling, or productivity-focused can deepen shutdown rather than reduce it.</p>
         </article>
 
         <article class="card insight-card">
-          <h3>Tools assume too much executive function</h3>
-          <p>Users are expected to organize before receiving support.</p>
+          <h3>Capacity fluctuates by context.</h3>
+          <p>Energy, sensory input, social demands, stress, and health conditions all shaped whether a task felt possible.</p>
         </article>
+
+        <article class="card insight-card">
+          <h3>Users need help that preserves agency.</h3>
+          <p>The strongest support was not forceful automation, but consent-based scaffolding: small steps, clear choices, and the ability to pause without penalty.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Research to Design</div>
+      <div class="text-block text-block-wide">
+        <h2>How findings shaped the product</h2>
+      </div>
+
+      <div class="table-wrap">
+        <table class="research-to-design">
+          <thead>
+            <tr>
+              <th scope="col">Research finding</th>
+              <th scope="col">Design response in Scaffold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Users can freeze when a task feels too large, ambiguous, or emotionally loaded.</td>
+              <td>Scaffold breaks tasks into the next smallest actionable step instead of presenting a full productivity plan.</td>
+            </tr>
+            <tr>
+              <td>Shame and self-judgment increase cognitive load.</td>
+              <td>The interface avoids streaks, punitive reminders, urgency loops, or language that frames delay as failure.</td>
+            </tr>
+            <tr>
+              <td>External “help” can feel controlling when it removes agency.</td>
+              <td>Scaffold asks permission before taking action and allows “yes,” “not now,” or “pause” responses.</td>
+            </tr>
+            <tr>
+              <td>Users need support that adapts to available capacity.</td>
+              <td>The system offers lightweight pathways for focus, overwhelm, task initiation, and transition support.</td>
+            </tr>
+            <tr>
+              <td>Participants valued sensory quiet, predictability, and time to re-regulate.</td>
+              <td>Scaffold prioritizes simple prompts, low visual noise, and reversible interactions over feature density.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -115,12 +199,10 @@
         <div class="persona-copy">
           <h2>Alex</h2>
           <p>
-            Alex is a highly capable adult who has spent much of their life being responsible, reliable,
-            and self-sufficient.
+            Alex is a highly capable adult who has spent much of their life being responsible, reliable, and self-sufficient.
           </p>
           <p>
-            Despite strong problem-solving ability, Alex experiences recurring cognitive shutdown—moments
-            where starting even simple tasks becomes neurologically inaccessible.
+            Despite strong problem-solving ability, Alex experiences recurring cognitive shutdown—moments where starting even simple tasks becomes neurologically inaccessible.
           </p>
 
           <div class="persona-columns">
@@ -158,11 +240,7 @@
         <div class="text-block">
           <h2>Task initiation distress cycle</h2>
           <p>
-            When task initiation fails, emotional and practical consequences accumulate, reducing
-            cognitive bandwidth and reinforcing cycles of overwhelm.
-          </p>
-          <p>
-            Color indicates emotional and cognitive state progression.
+            When task initiation fails, emotional and practical consequences accumulate, reducing cognitive bandwidth and reinforcing cycles of overwhelm.
           </p>
         </div>
 
@@ -218,8 +296,7 @@
       <div class="card intervention-card">
         <h2>Scaffold as a cognitive prosthetic</h2>
         <p>
-          Scaffold functions as a cognitive prosthetic—an external support that extends a user’s ability
-          to initiate action when internal resources are unavailable.
+          Scaffold functions as a cognitive prosthetic—an external support that extends a user’s ability to initiate action when internal resources are unavailable.
         </p>
         <p>Instead of requiring planning, the system:</p>
 
@@ -271,9 +348,9 @@
     <section id="prototype" class="section">
       <div class="section-label">Prototype</div>
       <div class="text-block text-block-wide">
-        <h2>Selected prototype screens</h2>
+        <h2>Prototype evolution</h2>
         <p>
-          Selected prototype screens illustrating key interaction patterns.
+          The early paper prototype explored three core pathways: starting a task, protecting focus, and responding to overwhelm. The high-fidelity prototype refined those pathways into a calmer, more structured interface that could support users when cognitive bandwidth is limited.
         </p>
       </div>
 
@@ -337,9 +414,7 @@
           <h3>Focus Timer</h3>
           <p>Creates a bounded, finite container for attention during initiation.</p>
           <p class="prototype-note">
-            Transition chimes provide gentle sensory cues at the beginning and end of a focus interval,
-            supporting users who benefit from externalized transitions and reduced reliance on internal
-            time tracking.
+            Transition chimes provide gentle sensory cues at the beginning and end of a focus interval, supporting users who benefit from externalized transitions and reduced reliance on internal time tracking.
           </p>
         </article>
 
@@ -357,14 +432,12 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section evidence-section">
       <div class="section-label">Ethical AI Design Constraints</div>
       <div class="text-block text-block-wide">
         <h2>Designed for support, not behavioral control</h2>
         <p>
-          Scaffold is designed as a support system, not a productivity optimizer or autonomous agent.
-          Its behavior is intentionally constrained to preserve user autonomy, minimize unintended
-          influence, and reduce cognitive burden.
+          Scaffold is designed as a support system, not a productivity optimizer or autonomous agent. Its behavior is intentionally constrained to preserve user autonomy, minimize unintended influence, and reduce cognitive burden.
         </p>
 
         <ul>
@@ -408,12 +481,14 @@
     </section>
 
     <section class="section">
-      <div class="section-label">Outcome</div>
+      <div class="section-label">Next Product Questions</div>
       <div class="text-block text-block-wide">
-        <h2>What this enables</h2>
+        <h2>What I would build next</h2>
         <p>
-          By reducing the cognitive barrier to entry, Scaffold enables users to move from intention to
-          action with less friction.
+          If developed beyond prototype stage, Scaffold would require additional participatory research with neurodivergent users, stronger accessibility testing, privacy review, therapist or occupational therapy consultation, and careful evaluation of how AI support behaves under stress conditions.
+        </p>
+        <p>
+          The next product questions would be: When does support become pressure? What forms of memory feel helpful rather than invasive? How can the system stay useful while remaining transparent, optional, and easy to refuse?
         </p>
       </div>
     </section>
@@ -421,10 +496,12 @@
     <section class="section">
       <div class="reflection-block">
         <div class="section-label reflection-label">Reflection</div>
-        <h2>The problem is not motivation</h2>
-        <p>It is misalignment between human cognition and system expectations.</p>
+        <h2>Design must support how people actually function.</h2>
         <p>
-          Design must support how people actually function, not how systems expect them to behave.
+          Scaffold reframes executive dysfunction as a mismatch between human cognition and system expectations—not as a failure of motivation.
+        </p>
+        <p>
+          The design challenge is not to push users harder. It is to reduce friction, preserve agency, and make action possible when internal resources are already strained.
         </p>
       </div>
     </section>
