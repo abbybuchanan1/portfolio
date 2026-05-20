@@ -1620,3 +1620,165 @@ RESPONSIVE
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   VISUAL FIX PASS — MAY 19
+   paste at very bottom of styles.css
+========================================================= */
+
+/* HERO: fix awkward headline wrapping */
+.hero-home h1 {
+  max-width: 12.5ch;
+  font-size: clamp(58px, 7.5vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.hero-home {
+  padding-top: 88px;
+}
+
+.hero-home .hero-copy {
+  max-width: 64ch;
+  margin-top: 28px;
+}
+
+.hero-home .hero-subcopy {
+  max-width: 66ch;
+}
+
+/* Optional alternate if you change headline text later */
+@media (min-width: 900px) {
+  .hero-home h1 {
+    max-width: 13.5ch;
+  }
+}
+
+/* SCAFFOLD META CARDS: stop huge h2 inside cards */
+.meta-grid {
+  align-items: stretch;
+}
+
+.meta-card {
+  padding: 28px 30px;
+}
+
+.meta-card h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.08;
+  max-width: none;
+  margin-bottom: 18px;
+}
+
+.meta-card p {
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* SCAFFOLD CARD PADDING: fix cramped card content */
+.artifact-card,
+.insight-card,
+.resume-card {
+  padding: 28px;
+}
+
+.artifact-card h3,
+.insight-card h3 {
+  font-size: 22px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.artifact-card p,
+.insight-card p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Research foundation background: remove clashy green wash */
+.evidence-section {
+  background: transparent;
+  border-top: 1px solid rgba(31, 39, 34, 0.08);
+  border-bottom: 1px solid rgba(31, 39, 34, 0.08);
+}
+
+/* But keep a subtle intentional treatment inside the cards */
+.artifact-card {
+  background: #fffdf8;
+  border-color: rgba(47, 74, 58, 0.16);
+}
+
+/* Alex quote: override old lavender/purple styling */
+blockquote,
+.persona-copy blockquote {
+  background: #eef2ea !important;
+  border-left: 5px solid #6f8067 !important;
+  color: #2f4a3a !important;
+  font-style: italic;
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.35;
+}
+
+/* Remove old purple variable influence where it appears */
+:root {
+  --purple: #6f8067;
+  --purple-soft: rgba(111, 128, 103, 0.14);
+}
+
+/* Intervention card: reduce giant scale and make it breathe */
+.intervention-card {
+  padding: clamp(32px, 5vw, 54px);
+}
+
+.intervention-card h2 {
+  max-width: 16ch;
+  font-size: clamp(40px, 5.2vw, 72px);
+}
+
+.intervention-list {
+  margin-top: 28px;
+}
+
+/* Reflection block: improve contrast */
+.reflection-block {
+  background: #151515;
+}
+
+.reflection-label,
+.reflection-block .section-label {
+  color: #b9c8b0 !important;
+}
+
+.reflection-block h2,
+.reflection-block p {
+  color: #ffffff;
+}
+
+/* Better spacing rhythm between large sections */
+.section {
+  padding-top: clamp(64px, 7vw, 96px);
+  padding-bottom: clamp(64px, 7vw, 96px);
+}
+
+/* Mobile cleanup */
+@media (max-width: 760px) {
+  .hero-home h1 {
+    max-width: 9.5ch;
+    font-size: clamp(44px, 13vw, 64px);
+  }
+
+  .meta-card,
+  .artifact-card,
+  .insight-card {
+    padding: 22px;
+  }
+
+  .meta-card h2 {
+    font-size: 30px;
+  }
+
+  .intervention-card h2 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+}
