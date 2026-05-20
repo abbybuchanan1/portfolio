@@ -1205,3 +1205,418 @@ blockquote {
 .back-to-top:hover {
   opacity: 1;
 }
+/* =========================================================
+PORTFOLIO REFINEMENT LAYER
+========================================================= */
+
+:root {
+  --green-deep: #2f4a3a;
+  --green-moss: #61745b;
+  --green-sage: #dfe8dc;
+  --green-pale: #f4f7f2;
+
+  --text-dark: #1f2722;
+  --text-muted: #5f6f66;
+
+  --border-soft: rgba(31, 39, 34, 0.12);
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+
+  --shadow-soft: 0 14px 32px rgba(0,0,0,0.05);
+
+  --max-readable: 72ch;
+}
+
+/* =========================================================
+TYPOGRAPHY + READABILITY
+========================================================= */
+
+body {
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+p,
+li {
+  max-width: var(--max-readable);
+}
+
+.hero-subcopy-wide,
+.text-block-wide {
+  max-width: 72ch;
+}
+
+/* =========================================================
+ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--green-deep);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.button,
+.button-secondary {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.button-secondary {
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border: 1px solid var(--border-soft);
+}
+
+.button-secondary:hover {
+  background: var(--green-sage);
+}
+
+/* =========================================================
+SECTION LABELS
+========================================================= */
+
+.section-label,
+.eyebrow,
+.mini-label {
+  color: var(--green-moss);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+FRAMEWORK / SYSTEM CARDS
+========================================================= */
+
+.framework-card,
+.diagram-card,
+.meta-card,
+.insight-card,
+.artifact-card,
+.resume-card,
+.prototype-card {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+FRAMEWORK FLOW
+========================================================= */
+
+.framework-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.framework-node {
+  flex: 1 1 180px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  background: white;
+}
+
+.framework-node-accent {
+  background: var(--green-pale);
+  border-color: var(--green-sage);
+}
+
+.framework-node-green {
+  background: var(--green-sage);
+}
+
+.framework-arrow {
+  font-size: 1.5rem;
+  color: var(--green-moss);
+}
+
+.node-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.node-copy {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+META GRID
+========================================================= */
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+ARTIFACT + INSIGHT GRIDS
+========================================================= */
+
+.artifact-grid,
+.insights-grid,
+.writing-grid,
+.resume-stack {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.insights-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 2rem;
+}
+
+.artifact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+/* =========================================================
+RESEARCH TABLE
+========================================================= */
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  background: white;
+}
+
+.research-to-design {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.research-to-design th,
+.research-to-design td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.research-to-design th {
+  background: var(--green-sage);
+  color: var(--green-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.research-to-design tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+PERSONA SECTION
+========================================================= */
+
+.persona-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.persona-large {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.persona-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.persona-copy blockquote {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--green-sage);
+  color: var(--green-deep);
+  font-style: italic;
+}
+
+/* =========================================================
+DISTRESS CYCLE
+========================================================= */
+
+.cycle-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.cycle-step-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.cycle-step-red {
+  background: #f6ece8;
+}
+
+.cycle-step-amber {
+  background: #f7f2e6;
+}
+
+.cycle-step-neutral {
+  background: #eef1ef;
+}
+
+.step-number {
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.step-title {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.step-copy {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+INTERVENTION SECTION
+========================================================= */
+
+.intervention-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.intervention-item {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--green-pale);
+  border: 1px solid var(--green-sage);
+  color: var(--green-deep);
+}
+
+/* =========================================================
+PROTOTYPE GRID
+========================================================= */
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.prototype-card {
+  padding: 1rem;
+}
+
+.prototype-thumb {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.prototype-note {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+ABOUT SECTION
+========================================================= */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+/* =========================================================
+ETHICS / EVIDENCE BLOCKS
+========================================================= */
+
+.evidence-section {
+  background: linear-gradient(
+    180deg,
+    rgba(223, 232, 220, 0.35),
+    rgba(255,255,255,0)
+  );
+}
+
+.reflection-block {
+  max-width: 72ch;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .persona-card,
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .framework-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .framework-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .prototype-grid,
+  .artifact-grid,
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
