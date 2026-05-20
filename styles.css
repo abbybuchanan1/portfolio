@@ -1782,3 +1782,70 @@ blockquote,
     font-size: clamp(34px, 10vw, 46px);
   }
 }
+/* =========================================================
+   SCAFFOLD RESEARCH ASSETS
+========================================================= */
+
+.realworld-section {
+  border-top: 1px solid rgba(31,39,34,0.08);
+}
+
+.artifact-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.artifact-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+
+  border-radius: 18px;
+  border: 1px solid rgba(31,39,34,0.1);
+  background: #fffdf8;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.artifact-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(47,74,58,0.22);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+
+.artifact-type {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #61745b;
+}
+
+.artifact-link-card h3 {
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.artifact-link-card p {
+  margin: 0;
+  color: #5f6f66;
+}
+
+.artifact-cta {
+  margin-top: auto;
+  color: #2f4a3a;
+  font-weight: 600;
+}
+
+.timeline-stack {
+  display: grid;
+  gap: 1.25rem;
+}
