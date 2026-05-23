@@ -1205,3 +1205,647 @@ blockquote {
 .back-to-top:hover {
   opacity: 1;
 }
+/* =========================================================
+PORTFOLIO REFINEMENT LAYER
+========================================================= */
+
+:root {
+  --green-deep: #2f4a3a;
+  --green-moss: #61745b;
+  --green-sage: #dfe8dc;
+  --green-pale: #f4f7f2;
+
+  --text-dark: #1f2722;
+  --text-muted: #5f6f66;
+
+  --border-soft: rgba(31, 39, 34, 0.12);
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+
+  --shadow-soft: 0 14px 32px rgba(0,0,0,0.05);
+
+  --max-readable: 72ch;
+}
+
+/* =========================================================
+TYPOGRAPHY + READABILITY
+========================================================= */
+
+body {
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+p,
+li {
+  max-width: var(--max-readable);
+}
+
+.hero-subcopy-wide,
+.text-block-wide {
+  max-width: 72ch;
+}
+
+/* =========================================================
+ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--green-deep);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.button,
+.button-secondary {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.button-secondary {
+  background: var(--green-pale);
+  color: var(--green-deep);
+  border: 1px solid var(--border-soft);
+}
+
+.button-secondary:hover {
+  background: var(--green-sage);
+}
+
+/* =========================================================
+SECTION LABELS
+========================================================= */
+
+.section-label,
+.eyebrow,
+.mini-label {
+  color: var(--green-moss);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+FRAMEWORK / SYSTEM CARDS
+========================================================= */
+
+.framework-card,
+.diagram-card,
+.meta-card,
+.insight-card,
+.artifact-card,
+.resume-card,
+.prototype-card {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+FRAMEWORK FLOW
+========================================================= */
+
+.framework-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.framework-node {
+  flex: 1 1 180px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  background: white;
+}
+
+.framework-node-accent {
+  background: var(--green-pale);
+  border-color: var(--green-sage);
+}
+
+.framework-node-green {
+  background: var(--green-sage);
+}
+
+.framework-arrow {
+  font-size: 1.5rem;
+  color: var(--green-moss);
+}
+
+.node-title {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.node-copy {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+META GRID
+========================================================= */
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================================================
+ARTIFACT + INSIGHT GRIDS
+========================================================= */
+
+.artifact-grid,
+.insights-grid,
+.writing-grid,
+.resume-stack {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.insights-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 2rem;
+}
+
+.artifact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+/* =========================================================
+RESEARCH TABLE
+========================================================= */
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  background: white;
+}
+
+.research-to-design {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.research-to-design th,
+.research-to-design td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.research-to-design th {
+  background: var(--green-sage);
+  color: var(--green-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.research-to-design tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+PERSONA SECTION
+========================================================= */
+
+.persona-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.persona-large {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.persona-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.persona-copy blockquote {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--green-sage);
+  color: var(--green-deep);
+  font-style: italic;
+}
+
+/* =========================================================
+DISTRESS CYCLE
+========================================================= */
+
+.cycle-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.cycle-step-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.cycle-step-red {
+  background: #f6ece8;
+}
+
+.cycle-step-amber {
+  background: #f7f2e6;
+}
+
+.cycle-step-neutral {
+  background: #eef1ef;
+}
+
+.step-number {
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.step-title {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.step-copy {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+INTERVENTION SECTION
+========================================================= */
+
+.intervention-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.intervention-item {
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--green-pale);
+  border: 1px solid var(--green-sage);
+  color: var(--green-deep);
+}
+
+/* =========================================================
+PROTOTYPE GRID
+========================================================= */
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.prototype-card {
+  padding: 1rem;
+}
+
+.prototype-thumb {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.prototype-note {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+ABOUT SECTION
+========================================================= */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+/* =========================================================
+ETHICS / EVIDENCE BLOCKS
+========================================================= */
+
+.evidence-section {
+  background: linear-gradient(
+    180deg,
+    rgba(223, 232, 220, 0.35),
+    rgba(255,255,255,0)
+  );
+}
+
+.reflection-block {
+  max-width: 72ch;
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .persona-card,
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .framework-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .framework-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .prototype-grid,
+  .artifact-grid,
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   VISUAL FIX PASS — MAY 19
+   paste at very bottom of styles.css
+========================================================= */
+
+/* HERO: fix awkward headline wrapping */
+.hero-home h1 {
+  max-width: 12.5ch;
+  font-size: clamp(58px, 7.5vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.hero-home {
+  padding-top: 88px;
+}
+
+.hero-home .hero-copy {
+  max-width: 64ch;
+  margin-top: 28px;
+}
+
+.hero-home .hero-subcopy {
+  max-width: 66ch;
+}
+
+/* Optional alternate if you change headline text later */
+@media (min-width: 900px) {
+  .hero-home h1 {
+    max-width: 13.5ch;
+  }
+}
+
+/* SCAFFOLD META CARDS: stop huge h2 inside cards */
+.meta-grid {
+  align-items: stretch;
+}
+
+.meta-card {
+  padding: 28px 30px;
+}
+
+.meta-card h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.08;
+  max-width: none;
+  margin-bottom: 18px;
+}
+
+.meta-card p {
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* SCAFFOLD CARD PADDING: fix cramped card content */
+.artifact-card,
+.insight-card,
+.resume-card {
+  padding: 28px;
+}
+
+.artifact-card h3,
+.insight-card h3 {
+  font-size: 22px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.artifact-card p,
+.insight-card p {
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Research foundation background: remove clashy green wash */
+.evidence-section {
+  background: transparent;
+  border-top: 1px solid rgba(31, 39, 34, 0.08);
+  border-bottom: 1px solid rgba(31, 39, 34, 0.08);
+}
+
+/* But keep a subtle intentional treatment inside the cards */
+.artifact-card {
+  background: #fffdf8;
+  border-color: rgba(47, 74, 58, 0.16);
+}
+
+/* Alex quote: override old lavender/purple styling */
+blockquote,
+.persona-copy blockquote {
+  background: #eef2ea !important;
+  border-left: 5px solid #6f8067 !important;
+  color: #2f4a3a !important;
+  font-style: italic;
+  font-size: clamp(24px, 2.4vw, 34px);
+  line-height: 1.35;
+}
+
+/* Remove old purple variable influence where it appears */
+:root {
+  --purple: #6f8067;
+  --purple-soft: rgba(111, 128, 103, 0.14);
+}
+
+/* Intervention card: reduce giant scale and make it breathe */
+.intervention-card {
+  padding: clamp(32px, 5vw, 54px);
+}
+
+.intervention-card h2 {
+  max-width: 16ch;
+  font-size: clamp(40px, 5.2vw, 72px);
+}
+
+.intervention-list {
+  margin-top: 28px;
+}
+
+/* Reflection block: improve contrast */
+.reflection-block {
+  background: #151515;
+}
+
+.reflection-label,
+.reflection-block .section-label {
+  color: #b9c8b0 !important;
+}
+
+.reflection-block h2,
+.reflection-block p {
+  color: #ffffff;
+}
+
+/* Better spacing rhythm between large sections */
+.section {
+  padding-top: clamp(64px, 7vw, 96px);
+  padding-bottom: clamp(64px, 7vw, 96px);
+}
+
+/* Mobile cleanup */
+@media (max-width: 760px) {
+  .hero-home h1 {
+    max-width: 9.5ch;
+    font-size: clamp(44px, 13vw, 64px);
+  }
+
+  .meta-card,
+  .artifact-card,
+  .insight-card {
+    padding: 22px;
+  }
+
+  .meta-card h2 {
+    font-size: 30px;
+  }
+
+  .intervention-card h2 {
+    font-size: clamp(34px, 10vw, 46px);
+  }
+}
+/* =========================================================
+   SCAFFOLD RESEARCH ASSETS
+========================================================= */
+
+.realworld-section {
+  border-top: 1px solid rgba(31,39,34,0.08);
+}
+
+.artifact-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.artifact-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 28px;
+  text-decoration: none;
+  color: inherit;
+
+  border-radius: 18px;
+  border: 1px solid rgba(31,39,34,0.1);
+  background: #fffdf8;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.artifact-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(47,74,58,0.22);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+
+.artifact-type {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #61745b;
+}
+
+.artifact-link-card h3 {
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.artifact-link-card p {
+  margin: 0;
+  color: #5f6f66;
+}
+
+.artifact-cta {
+  margin-top: auto;
+  color: #2f4a3a;
+  font-weight: 600;
+}
+
+.timeline-stack {
+  display: grid;
+  gap: 1.25rem;
+}
