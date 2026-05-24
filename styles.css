@@ -2851,3 +2851,112 @@ li {
   color: white;
   border-color: var(--scaffold-accent);
 }
+/* --------------------------------
+   Homepage hero refinements
+-------------------------------- */
+
+.home-hero {
+  padding: 5.5rem 0 6rem;
+}
+
+.hero-eyebrow {
+  margin-bottom: 2rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--scaffold-accent, #7b8a72);
+  font-weight: 600;
+}
+
+.home-hero h1 {
+  max-width: 980px;
+  margin: 0 0 2.25rem;
+  font-size: clamp(4.5rem, 10vw, 8.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  font-weight: 600;
+}
+
+.home-hero-copy {
+  max-width: 900px;
+  margin-bottom: 2.25rem;
+}
+
+.home-hero-copy p {
+  display: inline;
+  font-size: clamp(1.22rem, 2vw, 1.55rem);
+  line-height: 1.45;
+  font-weight: 500;
+  color: rgba(17, 17, 17, 0.92);
+}
+
+.home-hero-copy p + p::before {
+  content: " ";
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.75rem;
+  padding: 0 2rem;
+  border-radius: 999px;
+  background: #241e18;
+  color: #f5f2ec;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  background: var(--scaffold-accent, #7b8a72);
+  color: #fff;
+}
+
+.secondary-button {
+  background: #241e18;
+  color: #f5f2ec;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.secondary-button:hover {
+  background: var(--scaffold-accent, #7b8a72);
+  color: #fff;
+  border-color: var(--scaffold-accent, #7b8a72);
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    padding: 3.75rem 0 4.5rem;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+
+  .home-hero-copy p {
+    display: block;
+    font-size: 1.12rem;
+    line-height: 1.5;
+  }
+
+  .home-hero-copy p + p {
+    margin-top: 1rem;
+  }
+
+  .home-hero-copy p + p::before {
+    content: "";
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
