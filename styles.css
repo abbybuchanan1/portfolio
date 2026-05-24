@@ -2141,3 +2141,204 @@ blockquote,
     padding-bottom: 2rem;
   }
 }
+/* --------------------------------
+   Scaffold final polish
+-------------------------------- */
+
+.hero-scaffold {
+  padding-top: 5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-scaffold .meta-grid {
+  margin-top: 2rem;
+}
+
+.section {
+  padding-top: 4.75rem;
+  padding-bottom: 4.75rem;
+}
+
+.section + .section {
+  border-top: 1px solid rgba(36, 30, 24, 0.07);
+}
+
+.section-label,
+.mini-label,
+.artifact-type,
+.timeline-phase {
+  margin-bottom: 0.85rem;
+  color: rgba(36, 30, 24, 0.62);
+}
+
+.text-block-wide {
+  max-width: 880px;
+}
+
+.text-block-wide p {
+  max-width: 780px;
+}
+
+.meta-grid,
+.snapshot-grid,
+.artifact-grid,
+.insights-grid,
+.artifact-links-grid,
+.impact-grid,
+.prototype-grid {
+  gap: 1.1rem;
+}
+
+.card,
+.artifact-link-card,
+.prototype-card,
+.timeline-card {
+  box-shadow: 0 10px 30px rgba(36, 30, 24, 0.045);
+}
+
+.card h2,
+.card h3,
+.artifact-link-card h3,
+.prototype-card h3,
+.timeline-card h3 {
+  line-height: 1.18;
+}
+
+.card p,
+.artifact-link-card p,
+.prototype-card p,
+.timeline-card p {
+  line-height: 1.58;
+}
+
+/* Make the project snapshot easier to scan */
+
+.snapshot-grid .card h3,
+.meta-card h2 {
+  font-size: 0.82rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(36, 30, 24, 0.62);
+}
+
+.snapshot-grid .card p,
+.meta-card p {
+  font-size: 0.98rem;
+}
+
+/* Artifact cards need to feel clickable */
+
+.artifact-link-card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.artifact-link-card .artifact-cta {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+/* Improve table readability */
+
+.research-to-design {
+  font-size: 0.96rem;
+}
+
+.research-to-design th {
+  background: rgba(36, 30, 24, 0.045);
+}
+
+.research-to-design td:first-child {
+  font-weight: 500;
+}
+
+/* Keep persona from feeling oversized */
+
+.persona-card {
+  align-items: start;
+}
+
+.persona-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.persona-large {
+  max-width: 260px;
+}
+
+/* Improve diagram rhythm */
+
+.cycle-step,
+.framework-node,
+.intervention-item {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.cycle-step {
+  min-height: 86px;
+}
+
+.framework-node {
+  min-height: 140px;
+}
+
+/* Prototype cards */
+
+.prototype-card {
+  height: 100%;
+}
+
+.screen-wrap {
+  aspect-ratio: 9 / 16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prototype-thumb {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Limitations section */
+
+.limitations,
+.reflection-block,
+.philosophy-block {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile tightening */
+
+@media (max-width: 900px) {
+  .hero-scaffold {
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .section {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .card,
+  .artifact-link-card,
+  .prototype-card,
+  .timeline-card {
+    padding: 1.15rem;
+  }
+
+  .persona-large {
+    max-width: 220px;
+  }
+
+  .research-to-design th,
+  .research-to-design td {
+    padding: 0.85rem;
+  }
+}
