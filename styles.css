@@ -2834,3 +2834,20 @@ li {
     margin-top: 1.5rem;
   }
 }
+.synthesis-actions {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--scaffold-ink);
+  border: 1px solid rgba(36, 30, 24, 0.18);
+  box-shadow: none;
+}
+
+.secondary-button:hover {
+  background: var(--scaffold-accent);
+  color: white;
+  border-color: var(--scaffold-accent);
+}
