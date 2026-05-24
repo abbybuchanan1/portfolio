@@ -2342,3 +2342,436 @@ blockquote,
     padding: 0.85rem;
   }
 }
+/* --------------------------------
+   Scaffold subtle visual upgrade
+   Paste at bottom of styles.css
+-------------------------------- */
+
+:root {
+  --scaffold-accent: #7b8a72;
+  --scaffold-accent-soft: rgba(123, 138, 114, 0.12);
+  --scaffold-ink: #241e18;
+}
+
+/* Softer page rhythm */
+
+#main-content .section:nth-of-type(even) {
+  background: rgba(36, 30, 24, 0.018);
+}
+
+.hero-scaffold {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scaffold::after {
+  content: "";
+  position: absolute;
+  right: -8rem;
+  top: 5rem;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(123, 138, 114, 0.13),
+    rgba(123, 138, 114, 0)
+  );
+  pointer-events: none;
+}
+
+/* Accent labels */
+
+.section-label,
+.mini-label,
+.artifact-type,
+.timeline-phase {
+  color: var(--scaffold-accent);
+  opacity: 1;
+}
+
+/* Slightly stronger hierarchy */
+
+.text-block h2,
+.reflection-block h2,
+.philosophy-block p {
+  line-height: 1.08;
+}
+
+.text-block p,
+.card p,
+.artifact-link-card p,
+.prototype-card p,
+.timeline-card p,
+.persona-copy p,
+li {
+  color: rgba(36, 30, 24, 0.82);
+}
+
+/* More variation between cards and editorial sections */
+
+.card,
+.artifact-link-card,
+.prototype-card,
+.timeline-card {
+  border-color: rgba(36, 30, 24, 0.11);
+  box-shadow: 0 14px 34px rgba(36, 30, 24, 0.045);
+}
+
+.text-block-wide {
+  max-width: 900px;
+}
+
+/* Stronger project snapshot scanability */
+
+.snapshot-grid .card,
+.meta-card {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.snapshot-grid .card h3,
+.meta-card h2 {
+  color: var(--scaffold-accent);
+}
+
+/* Artifact cards feel more clickable */
+
+.artifact-link-card {
+  border-top: 3px solid var(--scaffold-accent-soft);
+}
+
+.artifact-link-card:hover {
+  border-top-color: var(--scaffold-accent);
+}
+
+/* Research table polish */
+
+.research-to-design th {
+  background: var(--scaffold-accent-soft);
+  color: rgba(36, 30, 24, 0.78);
+}
+
+.research-to-design td:first-child {
+  border-left: 3px solid rgba(123, 138, 114, 0.22);
+}
+
+/* Softer persona treatment */
+
+.persona-card {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 138, 114, 0.08),
+      rgba(255, 255, 255, 0.75)
+    );
+}
+
+/* Subtle diagram emphasis */
+
+.diagram-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(123, 138, 114, 0.055)
+    );
+}
+
+.cycle-step,
+.framework-node,
+.intervention-item {
+  border-left: 3px solid rgba(123, 138, 114, 0.25);
+}
+
+.framework-node-green {
+  border-left-color: var(--scaffold-accent);
+  background: rgba(123, 138, 114, 0.1);
+}
+
+.framework-arrow {
+  color: var(--scaffold-accent);
+  font-weight: 700;
+}
+
+/* Prototype visual lift */
+
+.prototype-grid {
+  gap: 1.5rem;
+}
+
+.prototype-card {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.screen-wrap {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(123, 138, 114, 0.12),
+      rgba(255, 255, 255, 0.65)
+    );
+}
+
+.prototype-thumb {
+  transform: scale(1.015);
+}
+
+/* Philosophy/reflection sections feel more editorial */
+
+.philosophy-block,
+.reflection-block {
+  background: transparent;
+  box-shadow: none;
+  border-left: 4px solid var(--scaffold-accent);
+  padding-left: 1.5rem;
+}
+
+.philosophy-block p {
+  color: rgba(36, 30, 24, 0.88);
+}
+
+/* Buttons */
+
+.button {
+  background: var(--scaffold-ink);
+}
+
+.button:hover {
+  background: var(--scaffold-accent);
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 900px) {
+  .hero-scaffold::after {
+    width: 14rem;
+    height: 14rem;
+    right: -6rem;
+    top: 3rem;
+  }
+
+  .philosophy-block,
+  .reflection-block {
+    padding-left: 1rem;
+  }
+
+  .prototype-grid {
+    gap: 1rem;
+  }
+}/* --------------------------------
+   Scaffold subtle visual upgrade
+   Paste at bottom of styles.css
+-------------------------------- */
+
+:root {
+  --scaffold-accent: #7b8a72;
+  --scaffold-accent-soft: rgba(123, 138, 114, 0.12);
+  --scaffold-ink: #241e18;
+}
+
+/* Softer page rhythm */
+
+#main-content .section:nth-of-type(even) {
+  background: rgba(36, 30, 24, 0.018);
+}
+
+.hero-scaffold {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scaffold::after {
+  content: "";
+  position: absolute;
+  right: -8rem;
+  top: 5rem;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(123, 138, 114, 0.13),
+    rgba(123, 138, 114, 0)
+  );
+  pointer-events: none;
+}
+
+/* Accent labels */
+
+.section-label,
+.mini-label,
+.artifact-type,
+.timeline-phase {
+  color: var(--scaffold-accent);
+  opacity: 1;
+}
+
+/* Slightly stronger hierarchy */
+
+.text-block h2,
+.reflection-block h2,
+.philosophy-block p {
+  line-height: 1.08;
+}
+
+.text-block p,
+.card p,
+.artifact-link-card p,
+.prototype-card p,
+.timeline-card p,
+.persona-copy p,
+li {
+  color: rgba(36, 30, 24, 0.82);
+}
+
+/* More variation between cards and editorial sections */
+
+.card,
+.artifact-link-card,
+.prototype-card,
+.timeline-card {
+  border-color: rgba(36, 30, 24, 0.11);
+  box-shadow: 0 14px 34px rgba(36, 30, 24, 0.045);
+}
+
+.text-block-wide {
+  max-width: 900px;
+}
+
+/* Stronger project snapshot scanability */
+
+.snapshot-grid .card,
+.meta-card {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.snapshot-grid .card h3,
+.meta-card h2 {
+  color: var(--scaffold-accent);
+}
+
+/* Artifact cards feel more clickable */
+
+.artifact-link-card {
+  border-top: 3px solid var(--scaffold-accent-soft);
+}
+
+.artifact-link-card:hover {
+  border-top-color: var(--scaffold-accent);
+}
+
+/* Research table polish */
+
+.research-to-design th {
+  background: var(--scaffold-accent-soft);
+  color: rgba(36, 30, 24, 0.78);
+}
+
+.research-to-design td:first-child {
+  border-left: 3px solid rgba(123, 138, 114, 0.22);
+}
+
+/* Softer persona treatment */
+
+.persona-card {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(123, 138, 114, 0.08),
+      rgba(255, 255, 255, 0.75)
+    );
+}
+
+/* Subtle diagram emphasis */
+
+.diagram-card {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(123, 138, 114, 0.055)
+    );
+}
+
+.cycle-step,
+.framework-node,
+.intervention-item {
+  border-left: 3px solid rgba(123, 138, 114, 0.25);
+}
+
+.framework-node-green {
+  border-left-color: var(--scaffold-accent);
+  background: rgba(123, 138, 114, 0.1);
+}
+
+.framework-arrow {
+  color: var(--scaffold-accent);
+  font-weight: 700;
+}
+
+/* Prototype visual lift */
+
+.prototype-grid {
+  gap: 1.5rem;
+}
+
+.prototype-card {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.screen-wrap {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(123, 138, 114, 0.12),
+      rgba(255, 255, 255, 0.65)
+    );
+}
+
+.prototype-thumb {
+  transform: scale(1.015);
+}
+
+/* Philosophy/reflection sections feel more editorial */
+
+.philosophy-block,
+.reflection-block {
+  background: transparent;
+  box-shadow: none;
+  border-left: 4px solid var(--scaffold-accent);
+  padding-left: 1.5rem;
+}
+
+.philosophy-block p {
+  color: rgba(36, 30, 24, 0.88);
+}
+
+/* Buttons */
+
+.button {
+  background: var(--scaffold-ink);
+}
+
+.button:hover {
+  background: var(--scaffold-accent);
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 900px) {
+  .hero-scaffold::after {
+    width: 14rem;
+    height: 14rem;
+    right: -6rem;
+    top: 3rem;
+  }
+
+  .philosophy-block,
+  .reflection-block {
+    padding-left: 1rem;
+  }
+
+  .prototype-grid {
+    gap: 1rem;
+  }
+}
