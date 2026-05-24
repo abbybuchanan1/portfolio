@@ -2775,3 +2775,62 @@ li {
     gap: 1rem;
   }
 }
+/* --------------------------------
+   Scaffold synthesis snapshot
+-------------------------------- */
+
+.synthesis-snapshot-section {
+  position: relative;
+}
+
+.synthesis-figure {
+  margin: 2rem 0 1.5rem;
+}
+
+.synthesis-figure a {
+  display: block;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 30, 24, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 16px 38px rgba(36, 30, 24, 0.06);
+}
+
+.synthesis-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1.01);
+}
+
+.synthesis-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.92rem;
+  color: rgba(36, 30, 24, 0.62);
+}
+
+.synthesis-callouts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.synthesis-callout {
+  border-top: 3px solid rgba(123, 138, 114, 0.24);
+}
+
+.synthesis-callout h3 {
+  margin-top: 0;
+  line-height: 1.18;
+}
+
+@media (max-width: 900px) {
+  .synthesis-callouts {
+    grid-template-columns: 1fr;
+  }
+
+  .synthesis-figure {
+    margin-top: 1.5rem;
+  }
+}
