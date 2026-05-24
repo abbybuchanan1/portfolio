@@ -3045,3 +3045,24 @@ li {
     margin: -0.25rem 0;
   }
 }
+/* --------------------------------
+   Fix Scaffold reflection contrast
+-------------------------------- */
+
+.reflection-block {
+  background: transparent;
+  color: #241e18;
+  border-left: 4px solid #7b8a72;
+  padding-left: 1.5rem;
+}
+
+.reflection-block .section-label,
+.reflection-block h2,
+.reflection-block p {
+  color: #241e18;
+  opacity: 1;
+}
+
+.reflection-block .section-label {
+  color: #7b8a72;
+}
