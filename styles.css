@@ -1849,3 +1849,295 @@ blockquote,
   display: grid;
   gap: 1.25rem;
 }
+/* -------------------------------
+   Scaffold Case Study Updates
+-------------------------------- */
+
+.hero-scaffold {
+  padding-bottom: 3rem;
+}
+
+.hero-subcopy-wide,
+.text-block-wide {
+  max-width: 860px;
+}
+
+.meta-grid,
+.artifact-grid,
+.insights-grid,
+.artifact-links-grid,
+.prototype-grid,
+.impact-grid,
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.artifact-grid,
+.insights-grid,
+.artifact-links-grid,
+.prototype-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card,
+.artifact-link-card,
+.prototype-card,
+.timeline-card {
+  border: 1px solid rgba(36, 30, 24, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 1.35rem;
+}
+
+.meta-card h2,
+.artifact-card h3,
+.insight-card h3,
+.artifact-link-card h3,
+.prototype-card h3,
+.timeline-card h3 {
+  margin-top: 0;
+}
+
+.artifact-link-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.artifact-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(36, 30, 24, 0.08);
+}
+
+.artifact-type,
+.section-label,
+.mini-label,
+.timeline-phase {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+.artifact-cta {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-weight: 600;
+}
+
+/* Research-to-design table */
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.research-to-design {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(36, 30, 24, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.research-to-design th,
+.research-to-design td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(36, 30, 24, 0.1);
+}
+
+.research-to-design th {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.research-to-design tr:last-child td {
+  border-bottom: none;
+}
+
+/* Persona */
+
+.persona-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.persona-large {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.persona-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.persona-copy blockquote {
+  margin: 1.5rem 0 0;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(36, 30, 24, 0.24);
+  font-size: 1.1rem;
+}
+
+/* Diagrams */
+
+.case-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.cycle-list-clean {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.cycle-step {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.step-number {
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.step-title,
+.node-title {
+  font-weight: 700;
+}
+
+.step-copy,
+.node-copy {
+  margin-top: 0.25rem;
+  opacity: 0.78;
+}
+
+.framework-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0.75rem;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.framework-node {
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(36, 30, 24, 0.1);
+}
+
+.framework-arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0.55;
+}
+
+/* Intervention */
+
+.intervention-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.intervention-item {
+  padding: 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(36, 30, 24, 0.1);
+  font-weight: 600;
+}
+
+/* Timeline */
+
+.timeline-stack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Prototype */
+
+.prototype-grid {
+  align-items: start;
+}
+
+.screen-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.64);
+  margin-bottom: 1rem;
+}
+
+.prototype-thumb {
+  width: 100%;
+  display: block;
+}
+
+.prototype-note {
+  font-size: 0.92rem;
+  opacity: 0.78;
+}
+
+/* CTA */
+
+.cta-card {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  .meta-grid,
+  .artifact-grid,
+  .insights-grid,
+  .artifact-links-grid,
+  .prototype-grid,
+  .impact-grid,
+  .snapshot-grid,
+  .case-two-col,
+  .persona-card,
+  .persona-columns,
+  .intervention-list {
+    grid-template-columns: 1fr;
+  }
+
+  .framework-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .framework-arrow {
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+
+  .hero-scaffold {
+    padding-bottom: 2rem;
+  }
+}
