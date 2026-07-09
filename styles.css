@@ -1902,3 +1902,19 @@ blockquote,
     height: 140px;
   }
 }
+#research {
+  padding-bottom: 5rem;
+}
+
+#research .wide-block {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+
+#research .writing-grid {
+  margin-top: 2rem;
+}
+
+#about {
+  padding-top: 5rem;
+}
