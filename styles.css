@@ -1016,34 +1016,7 @@ blockquote {
   }
 }
 }
-/* =========================
-   ABOUT IMAGE
-   ========================= */
 
-.about-layout {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 32px;
-  align-items: start;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 6px;
-  display: block;
-}
-
-/* Mobile */
-@media (max-width: 760px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .about-image img {
-    width: 140px;
-  }
-}
 /* =========================
    ABOUT SECTION
    ========================= */
@@ -1072,37 +1045,7 @@ blockquote {
     gap: 20px;
   }
 
-  .about-image img {
-    width: 140px;
-  }
-}
-/* =========================
-   MOBILE NAV POLISH
-   ========================= */
-
-@media (max-width: 760px) {
-  .nav {
-    padding: 16px 18px 4px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
- .logo-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.brand-lockup {
-  display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
-  column-gap: 10px;
-  width: auto;
-}
-
-.logo-image {
+  
   height: 28px;
   width: auto;
   max-width: none;
@@ -1261,7 +1204,6 @@ li {
 /* =========================================================
 ACCESSIBILITY
 ========================================================= */
-
 a:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--green-deep);
@@ -1917,4 +1859,48 @@ blockquote,
 
 #about {
   padding-top: 5rem;
+}
+/* =========================
+   HOMEPAGE RESEARCH + ABOUT
+   ========================= */
+
+.wide-block {
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+}
+
+#research .writing-grid {
+  margin-top: 2rem;
+}
+
+#research {
+  padding-bottom: 5rem;
+}
+
+#about {
+  padding-top: 5rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-image img {
+  width: 180px;
+  border-radius: 18px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    width: 180px;
+    margin-bottom: 1.5rem;
+  }
 }
