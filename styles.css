@@ -338,16 +338,27 @@ p {
 
 .about-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  gap: 36px;
-  align-items: center;
-  padding: 32px;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 .headshot {
-  width: 100%;
-  border-radius: 20px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .about-card {
+    grid-template-columns: 1fr;
+  }
+
+  .headshot {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 /* Scaffold core */
@@ -1848,4 +1859,13 @@ blockquote,
 .timeline-stack {
   display: grid;
   gap: 1.25rem;
+}
+
+.wide-block {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+#research .writing-grid {
+  margin-top: 1.75rem;
 }
