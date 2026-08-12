@@ -1,7 +1,7 @@
 /* Portfolio v1.0 — approved implementation */
 :root{
   --bg:#f6f3ee;--surface:#fffdf9;--ink:#161616;--muted:#66635f;--line:#dcd6cf;
-  --green:#5f735f;--green-soft:#e7ece5;--purple:#74657f;--purple-soft:#ece7ef;
+  --green:#66705f;--green-soft:#e8ebe3;--purple:#756a78;--purple-soft:#ede8eb;
   --radius-sm:14px;--radius:22px;--max:1180px;--text:720px;
   --s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:80px;--s9:96px;
 }
@@ -82,3 +82,64 @@ img{max-width:100%;height:auto}
 /* Phase 8 accessibility hardening */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media(forced-colors:active){.button,.card,.callout,.evidence-row,.table-wrap,.prototype-card,.status,.tag{border:1px solid CanvasText}:where(a,button,input,textarea,select):focus-visible{outline:3px solid Highlight}}
+
+
+/* v1.6 corrective pass: hierarchy, artifact structure, observation */
+.eyebrow,.section-label{margin-bottom:24px}
+.mini-label,.meta-label{margin-bottom:10px}
+.section-label + h2,.eyebrow + h1{margin-top:0}
+.callout p:last-child{margin-bottom:0}
+.artifact-page .article-body{max-width:760px}
+.artifact-section{padding:38px 0;border-top:1px solid var(--line)}
+.artifact-section:first-of-type{border-top:0;padding-top:12px}
+.artifact-section h2{font-family:Outfit,sans-serif;font-size:2rem;line-height:1.12;font-weight:500;letter-spacing:-.02em;margin:0 0 20px}
+.artifact-section h3{font-family:Outfit,sans-serif;font-size:1.35rem;line-height:1.2;margin:24px 0 10px}
+.artifact-section h4{font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--purple);margin:24px 0 8px}
+.artifact-list{padding-left:1.25em;margin:14px 0 24px}
+.artifact-list li{margin:7px 0}
+.artifact-kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:700;margin-bottom:10px}
+.artifact-implication{margin-top:26px;padding:20px 22px;border-left:3px solid var(--green);background:var(--green-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.artifact-implication p{margin:0}
+.artifact-compare,.artifact-grid-3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}
+.artifact-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.artifact-compare > div,.artifact-grid-3 > div{padding:20px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface)}
+.artifact-compare h3,.artifact-grid-3 h3{margin-top:0}
+.artifact-pattern,.artifact-observation{margin:28px 0;padding:24px;border:1px solid var(--line);border-radius:var(--radius-sm);background:rgba(255,253,249,.58)}
+.artifact-pattern h3,.artifact-observation h3{margin-top:0}
+.artifact-lede{font-family:Outfit,sans-serif;font-size:1.6rem;line-height:1.35}
+.artifact-definition-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.artifact-definition-list > div{border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px}
+.artifact-definition-list dt{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--green);font-weight:700;margin-bottom:6px}
+.artifact-definition-list dd{margin:0}
+.artifact-question-group{margin:30px 0}
+.artifact-note{margin-bottom:34px}
+.diptych{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.diptych img{width:100%;height:auto;min-height:0;object-fit:contain;aspect-ratio:4/5}
+.quiet-link{font-size:.86rem;color:var(--muted);margin-top:18px}
+.quiet-link a{text-decoration-color:var(--line)}
+.full-poem{font-family:Outfit,sans-serif;font-size:1.22rem;line-height:1.55;white-space:pre-line;max-width:620px}
+.education-list p{margin-bottom:14px}
+@media(max-width:720px){
+  .eyebrow,.section-label{margin-bottom:22px}
+  .hero h1,.page-title{font-size:clamp(2.55rem,11.5vw,3.45rem)}
+  .hero-copy{font-size:1.08rem;line-height:1.5}
+  .hero-subcopy{font-size:1rem}
+  .section h2,.text-block h2{font-size:1.85rem;line-height:1.12}
+  .card h3,.text-block h3,.section h3{font-size:1.3rem}
+  .card{padding:20px}
+  .about-grid .portrait{width:min(72vw,320px);justify-self:start}
+  .diptych{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .diptych img{width:100%;height:auto;min-height:0;aspect-ratio:4/5}
+  .artifact-compare,.artifact-grid-3,.artifact-definition-list{grid-template-columns:1fr}
+  .artifact-section{padding:30px 0}
+  .artifact-section h2{font-size:1.7rem}
+  .artifact-section h3{font-size:1.25rem}
+  .full-poem{font-size:1.08rem}
+}
+@media(max-width:480px){
+  .hero h1,.page-title{font-size:2.75rem}
+  .section h2,.text-block h2{font-size:1.75rem}
+  .card h3,.text-block h3,.section h3{font-size:1.25rem}
+  .about-grid .portrait{width:min(68vw,270px)}
+  .section{padding:44px 0}
+}
