@@ -150,3 +150,14 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media(max-width:720px){
   .article > header .eyebrow{margin-bottom:26px}
 }
+
+
+/* v1.7 memo callout spacing */
+.article-body > .callout{
+  margin-bottom:32px;
+}
+@media(max-width:720px){
+  .article-body > .callout{
+    margin-bottom:24px;
+  }
+}
