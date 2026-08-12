@@ -143,3 +143,10 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   .about-grid .portrait{width:min(68vw,270px)}
   .section{padding:44px 0}
 }
+
+
+/* v1.7 final recovery: article eyebrow spacing */
+.article > header .eyebrow{margin-bottom:30px}
+@media(max-width:720px){
+  .article > header .eyebrow{margin-bottom:26px}
+}
