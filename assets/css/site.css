@@ -161,3 +161,20 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
     margin-bottom:24px;
   }
 }
+
+/* Memo tables and collapsible sources (Nov 2026) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.article-body .memo-table{margin:8px 0 1.6em;font-size:15px;line-height:1.5}
+.article-body .memo-table table{min-width:640px}
+.article-body .memo-table tbody tr+tr th,.article-body .memo-table tbody tr+tr td{border-top:1px solid var(--line)}
+.article-body .memo-table tbody th{font-size:15px;text-transform:none;letter-spacing:0;color:var(--ink);font-weight:600}
+.article-body ol,.article-body ul{padding-left:1.3em;margin:0 0 1.45em}
+.article-body li{margin-bottom:.6em}
+.sources{margin:48px 0 8px;border-top:1px solid var(--line);padding-top:20px}
+.sources summary{cursor:pointer;font-size:12px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--green);list-style-position:outside}
+.sources summary:focus-visible{outline:3px solid var(--green);outline-offset:4px;border-radius:4px}
+.sources ol{margin-top:18px;font-size:15px;line-height:1.55}
+.sources li{margin-bottom:.8em}
+.article-body .memo-table th,.article-body .memo-table td{overflow-wrap:normal;word-break:normal;hyphens:manual}
+.article-body .memo-table thead th:first-child{min-width:120px}
+.article-body .memo-table tbody th{border-bottom:0}
