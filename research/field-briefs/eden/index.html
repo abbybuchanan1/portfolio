@@ -29,7 +29,7 @@
 .hyp-table .meta{display:flex;gap:8px;align-items:center;margin-top:8px}
 .tag{display:inline-block;font-size:11px;line-height:1;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 7px;border-radius:4px}
 .tag.reported{background:#e9ede4;color:#3F5F33}.tag.inferred{background:#efebe5;color:var(--muted)}.tag.provisional{border:1px dashed #9a958e;color:var(--muted);padding:4px 6px}
-.hyp-table tbody tr:last-child th{border-bottom:0}.hyp-table .src{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500}
+.hyp-table tbody tr:last-child th{border-bottom:0}.tag{vertical-align:2px;margin-left:4px}.hyp-table .tag{margin-left:0}.tag-src{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500;margin-left:6px;white-space:nowrap;margin-right:4px}.article-body h2{text-wrap:balance}.hyp-table .src{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500}
 .hyp-table tr.falsify th,.hyp-table tr.falsify td{background:rgba(163,71,42,.055)}.hyp-table tr.falsify th{color:#A3472A;box-shadow:inset 3px 0 0 #A3472A}
 .figure-wide{width:min(1060px,calc(100vw - 56px));margin:48px 0 48px 50%;transform:translateX(-50%)}
 .figure-wide img{border-radius:var(--radius)}.figure-wide figcaption{max-width:760px;margin:14px auto 0}
@@ -59,9 +59,9 @@
 
 <h2>Three trust moments</h2>
 <p>A trust moment is where someone must accept a number or a design they cannot check. In each, trust came through people and track record, not the number itself.</p>
-<p><strong>1. The engineer’s stamp.</strong> The engineer of record can’t check whether a tool used the original field data correctly. What would earn trust: keeping control of the design, with two or three standard layouts and automatic grading offered as starting points, not answers. <em>Reported · P1.</em> For the product: show where every input came from, and offer options to choose between rather than a finished design. <em>Provisional.</em></p>
-<p><strong>2. The cost no one can verify.</strong> The engineer and the site development director can’t check the construction cost a contractor supplies. Trust comes from experience, and from a contractor proven over time who explains a solution until the listener feels nearly as knowledgeable. <em>Reported · P1 P2.</em> For the product: let each number explain itself, with where it came from, its honest range, and what would change it. <em>Provisional.</em></p>
-<p><strong>3. The person who takes the blame.</strong> The site development director wants to keep control of most decisions, because they, not the software, answer for errors, and real projects carry variables a model assumes away. <em>Reported · P2.</em> For the product: design for defensibility, so the person signing can stand behind each recommendation, with its validity range in view. <em>Provisional.</em></p>
+<p><strong>1. The engineer’s stamp.</strong> The engineer of record can’t check whether a tool used the original field data correctly. What would earn trust: keeping control of the design, with two or three standard layouts and automatic grading offered as starting points, not answers. <span class="tag reported">Reported</span><span class="tag-src">P1</span> For the product: show where every input came from, and offer options to choose between rather than a finished design. <span class="tag provisional">Provisional</span></p>
+<p><strong>2. The cost no one can verify.</strong> The engineer and the site development director can’t check the construction cost a contractor supplies. Trust comes from experience, and from a contractor proven over time who explains a solution until the listener feels nearly as knowledgeable. <span class="tag reported">Reported</span><span class="tag-src">P1 · P2</span> For the product: let each number explain itself, with where it came from, its honest range, and what would change it. <span class="tag provisional">Provisional</span></p>
+<p><strong>3. The person who takes the blame.</strong> The site development director wants to keep control of most decisions, because they, not the software, answer for errors, and real projects carry variables a model assumes away. <span class="tag reported">Reported</span><span class="tag-src">P2</span> For the product: design for defensibility, so the person signing can stand behind each recommendation, with its validity range in view. <span class="tag provisional">Provisional</span></p>
 
 <h2>The human ecosystem</h2>
 <p>EDEN writes an ecological program: what each species needs from a site. This is the matching list for the human ecosystem a design passes through: each role’s needs, starting from what a good day looks like for it.</p>
@@ -78,9 +78,9 @@
 
 <h2>Three assumptions to test in the first 90 days</h2>
 <ol>
-<li>Ecological input at the site walk, rather than after the design is drafted, means fewer sites are moved or cancelled. <em>Provisional.</em></li>
-<li>Feeding what crews find on the ground back into early estimates narrows the gap between bid and final cost. <em>Provisional.</em></li>
-<li>Monitoring planned before construction is cheaper, and more likely to be funded, than monitoring added later. <em>Provisional.</em></li>
+<li>Ecological input at the site walk, rather than after the design is drafted, means fewer sites are moved or cancelled. <span class="tag provisional">Provisional</span></li>
+<li>Feeding what crews find on the ground back into early estimates narrows the gap between bid and final cost. <span class="tag provisional">Provisional</span></li>
+<li>Monitoring planned before construction is cheaper, and more likely to be funded, than monitoring added later. <span class="tag provisional">Provisional</span></li>
 </ol>
 
 <h2>Where this could grow</h2>
