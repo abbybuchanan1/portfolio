@@ -179,3 +179,4 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .article-body .memo-table thead th:first-child{min-width:120px}
 .article-body .memo-table tbody th{border-bottom:0}
 .card-link{border-color:#cfc7bd}.card-link::after{content:"Read \2192";display:block;margin-top:16px;font-size:14px;font-weight:500;color:var(--ink);text-decoration:underline;text-decoration-color:rgba(22,22,22,.3);text-underline-offset:4px}.card-link:hover::after,.card-link:focus-visible::after{text-decoration-color:var(--ink)}
+.card-accent{background:var(--green-soft);border-color:transparent}
