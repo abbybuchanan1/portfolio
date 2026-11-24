@@ -1,7 +1,7 @@
 /* Portfolio v1.0 — approved implementation */
 :root{
   --bg:#f6f3ee;--surface:#fffdf9;--ink:#161616;--muted:#66635f;--line:#dcd6cf;
-  --green:#66705f;--green-soft:#e8ebe3;--purple:#756a78;--purple-soft:#ede8eb;
+  --green:#5c6655;--green-soft:#e8ebe3;--purple:#756a78;--purple-soft:#ede8eb;
   --radius-sm:14px;--radius:22px;--max:1180px;--text:720px;
   --s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;--s8:80px;--s9:96px;
 }
